@@ -1,0 +1,7 @@
+# .map files exception
+*.map
+*.json
+ 
+# gulp
+gulpfile.js
+node_modules
