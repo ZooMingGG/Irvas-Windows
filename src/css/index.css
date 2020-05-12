@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+/*# sourceMappingURL=index.css.map */
