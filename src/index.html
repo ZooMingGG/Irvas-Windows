@@ -10,6 +10,114 @@
 </head>
 <body>
 
+    <div class="popup">
+        <div class="popup-dialog">
+            <div class="popup-content text-center">
+                <button type="button" class="popup-close"><strong>&times;</strong></button>
+                <div class="popup-form">
+                    <form class="form" action="#">
+                      <h2>Введіть ваші дані <br>і натисніть замовити дзвінок</h2>
+                        <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="text-uppercase btn-block button" name="submit" type="submit">Замовити дзвінок</button>
+                        <p class="form-notice">Передзвонимо протягом 10 хвилин</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-engineer">
+        <div class="popup-dialog">
+            <div class="popup-content text-center">
+                <button type="button" class="popup-close"><strong>&times;</strong></button>
+                <div class="popup-form">
+                    <form class="form" action="#">
+                      <h2>Запишіться сьогодні на  <br><span>безкоштовний замір</span></h2>
+                      <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                      <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                      <button class="text-uppercase btn-block button" name="submit" type="submit">Викликати замірника!</button>
+                      <p class="form-notice">Ваші дані конфіденційні</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="popup-calc">
+        <div class="popup-dialog">
+            <div class="popup-calc-content text-center">
+                <button type="button" class="popup-calc-close"><strong>&times;</strong></button>
+                 <h2>Калькулятор</h2>
+                <h3>Виберіть форму балкона <br>і вкажіть розміри</h3>
+                <div class="balcon-icons">
+                    <span class="balcon-icons-img do-image-more">
+                      <img src="assets/img/modal-calc/balkon/ba-01.png" alt="Тип1"></span>
+                    <span class="balcon-icons-img">
+                      <img src="assets/img/modal-calc/balkon/ba-02.png" alt="Тип2"></span>
+                    <span class="balcon-icons-img">
+                      <img src="assets/img/modal-calc/balkon/ba-03.png" alt="Тип3"></span>
+                    <span class="balcon-icons-img"> 
+                      <img src="assets/img/modal-calc/balkon/ba-04.png" alt="Тип4"></span>
+                  </div>
+                   <div class="big-img text-center">
+                     <img src="assets/img/modal-calc/balkon/type1.png" alt="Тип1">
+                     <img src="assets/img/modal-calc/balkon/type2.png" alt="Тип2">
+                     <img src="assets/img/modal-calc/balkon/type3.png" alt="Тип3">
+                     <img src="assets/img/modal-calc/balkon/type4.png" alt="Тип4">
+                   </div>
+                <input class="form-control" id="width" type="text" placeholder="Ширина" required>
+                <label for="width">мм</label>
+                <div class="multiplication"><strong>&times;</strong></div>
+                <input class="form-control" id="height" type="text" placeholder="Висота" required>
+                <label for="height">мм</label>
+                <button class="button popup-calc-button">Далі</button>
+            </div>
+        </div>
+    </div> 
+    <div class="popup-calc-profile">
+        <div class="popup-dialog">
+            <div class="popup-calc-profile-content text-center">
+                <button type="button" class="popup-calc-profile-close"><strong>&times;</strong></button>
+                 <h2>Калькулятор</h2>
+                 <h3>Виберіть тип засклення <br>і його профіль</h3>
+                 <select class="form-control" name="view" id="view-type">
+                   <option value="tree">Дерев'яне засклення</option>
+                   <option value="aluminum">Алюмінієве засклення</option>
+                   <option value="plastic">Засклення пластиковими рамами</option>
+                   <option value="french">Панорамне засклення</option>
+                   <option value="overhang">Засклення з виносом</option>
+                 </select>
+                 <img src="assets/img/modal-calc/icon-cold.png" alt="Холодне">
+                 <label>
+                     <input class="checkbox" type="checkbox" name="checkbox-test">
+                     <span class="checkbox-custom" id="cold"></span>
+                     <span class="label">Холодне</span>
+                 </label>
+                 <img src="assets/img/modal-calc/icon-warm.png" alt="Тепле">
+                 <label>
+                     <input class="checkbox" type="checkbox" name="checkbox-test">
+                     <span class="checkbox-custom" id="warm"></span>
+                     <span class="label">Тепле</span>
+                 </label>
+                 <button class="button popup-calc-profile-button">Далі</button>
+            </div>
+        </div>
+    </div> 
+    <div class="popup-calc-end">
+        <div class="popup-dialog">
+            <div class="popup-content text-center">
+                <button type="button" class="popup-calc-end-close"><strong>&times;</strong></button>
+                <div class="popup-form">
+                    <form class="form" action="#">
+                      <h2>Дякуюємо за звернення! <br>Залиште свої дані</h2>
+                        <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="text-uppercase btn-block button" name="submit" type="submit">Розрахувати вартість</button>
+                        <p class="form-notice">Передзвонимо протягом 10 хвилин</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="./js/index.js"></script>

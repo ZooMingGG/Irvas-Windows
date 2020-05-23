@@ -4,4 +4,9 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+
+/*Modals*/
+.popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */
