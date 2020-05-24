@@ -5,6 +5,66 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+/*Our works*/
+.our-works {
+    padding: 0 0 60px;
+
+    .our-works-header {
+        text-align: center;
+
+        .our-works-title {
+            font-family: 'Open Sans Bold';
+            font-size: 32px;
+            color: #333333;
+            margin: 80px auto 30px ;
+        }
+        
+        .our-works-line {
+            margin: 0 0 80px;
+        }
+    }
+
+    .our-works-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .our-works-item {
+            position: relative;
+            margin: 0 30px 30px 0;
+            width: 270px;
+            cursor: pointer;
+
+            .zoom-icon {
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                position: absolute;
+                display: none;
+            }
+
+            .our-works-img {
+                width: 100%;
+            }
+        }
+        
+        .our-works-item:nth-child(4), .our-works-item:nth-child(8) {
+            margin: 0 0 30px 0;
+        }
+
+        .our-works-item:hover .zoom-icon {
+            display: block;
+        }
+    }
+}
+
 /*Modals*/
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
