@@ -65,6 +65,44 @@
   display: block;
 }
 
+/*Payment options*/
+.payment-options {
+  padding: 80px 0;
+}
+
+.payment-options .payment-header {
+  text-align: center;
+  margin: 0 0 80px 0;
+}
+
+.payment-options .payment-header .payment-title {
+  font-family: 'Open Sans Bold';
+  font-size: 32px;
+  color: #333333;
+}
+
+.payment-options .payment-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.payment-options .payment-items .payment-item {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.payment-options .payment-items .payment-item .payment-item-img {
+  margin: 0 40px 0 0;
+}
+
+.payment-options .payment-items .payment-item .payment-item-text {
+  font-size: 18px;
+  font-family: 'Open Sans Regular';
+  color: #000000;
+}
+
 /*Modals*/
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
   display: none;

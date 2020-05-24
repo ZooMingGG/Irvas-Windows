@@ -65,6 +65,44 @@
     }
 }
 
+/*Payment options*/
+.payment-options {
+    padding: 80px 0;
+
+    .payment-header {
+        text-align: center;
+        margin: 0 0 80px 0;
+
+        .payment-title {
+            font-family: 'Open Sans Bold';
+            font-size: 32px;
+            color: #333333;
+        }
+    }
+
+    .payment-items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .payment-item {
+            width: 300px;
+            display: flex;
+            align-items: center;
+
+            .payment-item-img {
+                margin: 0 40px 0 0;
+            }
+
+            .payment-item-text {
+                font-size: 18px;
+                font-family: 'Open Sans Regular';
+                color: #000000;
+            }
+        }
+    }
+}
+
 /*Modals*/
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
