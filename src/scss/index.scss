@@ -150,6 +150,42 @@
     }
 }
 
+/*Footer*/
+footer {
+    padding: 40px 0;
+
+    .footer-body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .copyright {
+            font-family: 'Open Sans Regular';
+            font-size: 16px;
+            color: #000000;
+        }
+
+        .footer-contacts {
+            text-align: end;
+
+            .footer-phone {
+                font-family: 'Open Sans Bold';
+                font-size: 18px;
+                color: #333333;
+                text-decoration: none;
+            }
+
+            .footer-email {
+                font-family: 'Open Sans Regular';
+                font-size: 16px;
+                margin: 10px 0 0 0;
+                color: #42a1db;
+            }
+        }
+    }
+}
+
 /*Modals*/
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
