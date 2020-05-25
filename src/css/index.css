@@ -12,6 +12,89 @@
   max-width: 100%;
 }
 
+/*Header*/
+header {
+  padding: 20px 0;
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .header-content .header-text {
+  font-family: 'Open Sans Regular';
+  font-size: 15px;
+  color: #0096dc;
+}
+
+header .header-content .header-popup-btn {
+  width: 170px;
+  height: 60px;
+  border: 2px solid #58aa35;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .header-content .header-popup-btn .popup-icon {
+  margin: 0 10px 0 15px;
+}
+
+header .header-content .header-popup-btn .popup-btn-text {
+  font-family: 'Open Sans Regular';
+  font-size: 15px;
+  color: #58aa35;
+}
+
+header .header-content .work-time {
+  display: flex;
+  align-items: center;
+}
+
+header .header-content .work-time .work-time-text {
+  margin: 0 0 0 20px;
+  font-family: 'Open Sans Regular';
+  font-size: 15px;
+  color: #333333;
+}
+
+header .header-content .work-time .work-time-text .work-time {
+  margin: 5px 0 0;
+  font-family: 'Open Sans Semibold';
+  font-size: 18px;
+}
+
+header .header-content .contacts {
+  text-align: end;
+}
+
+header .header-content .contacts .phone {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+}
+
+header .header-content .contacts .phone .number {
+  font-family: 'Open Sans Bold';
+  font-size: 24px;
+  color: #333333;
+  text-decoration: none;
+  margin: 0 0 0 15px;
+}
+
+header .header-content .contacts .call-link {
+  margin: 10px 0 0;
+  font-family: 'Open Sans Regular';
+  font-size: 16px;
+  color: #0089cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /*Our works*/
 .our-works {
   padding: 0 0 60px;
