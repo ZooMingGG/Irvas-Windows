@@ -26,7 +26,7 @@ header .header-content {
 
 header .header-content .header-text {
   font-family: 'Open Sans Regular';
-  font-size: 15px;
+  font-size: 14px;
   color: #0096dc;
 }
 
@@ -46,7 +46,7 @@ header .header-content .header-popup-btn .popup-icon {
 
 header .header-content .header-popup-btn .popup-btn-text {
   font-family: 'Open Sans Regular';
-  font-size: 15px;
+  font-size: 14px;
   color: #58aa35;
 }
 
@@ -58,7 +58,7 @@ header .header-content .work-time {
 header .header-content .work-time .work-time-text {
   margin: 0 0 0 20px;
   font-family: 'Open Sans Regular';
-  font-size: 15px;
+  font-size: 14px;
   color: #333333;
 }
 
@@ -80,7 +80,7 @@ header .header-content .contacts .phone {
 
 header .header-content .contacts .phone .number {
   font-family: 'Open Sans Bold';
-  font-size: 24px;
+  font-size: 23px;
   color: #333333;
   text-decoration: none;
   margin: 0 0 0 15px;
@@ -89,10 +89,121 @@ header .header-content .contacts .phone .number {
 header .header-content .contacts .call-link {
   margin: 10px 0 0;
   font-family: 'Open Sans Regular';
-  font-size: 16px;
+  font-size: 15px;
   color: #0089cc;
   text-decoration: underline;
   cursor: pointer;
+}
+
+/*Intro*/
+.intro {
+  background: url("../images/header/header-background.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.intro .intro-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.intro .intro-content .intro-title {
+  margin: 0;
+  font-family: 'Open Sans Bold';
+  font-size: 26px;
+  color: #333333;
+}
+
+.intro .intro-content .intro-subtitle {
+  margin: 40px 0;
+  font-family: 'Open Sans Bold';
+  font-size: 55px;
+  color: #333333;
+}
+
+.intro .intro-content .intro-icons {
+  margin: 130px 0 0;
+}
+
+.intro .intro-content .intro-icons .intro-icon {
+  margin: 0 20px 0 0;
+}
+
+.intro .intro-content .intro-icons .intro-icon:nth-child(4) {
+  margin: 0 0 0 0;
+}
+
+.intro .intro-content .call-engineer-form {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 370px;
+  height: 442px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.intro .intro-content .call-engineer-form .form-title {
+  font-family: 'Open Sans Bold';
+  font-size: 20px;
+  line-height: 38px;
+  color: #333333;
+}
+
+.intro .intro-content .call-engineer-form .form-title .form-subtitle {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.intro .intro-content .call-engineer-form .name-input {
+  width: 270px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  margin: 10px auto 0;
+  outline: none;
+  text-align: center;
+  font-family: 'Open Sans Regular';
+  color: #999999;
+  font-size: 15px;
+}
+
+.intro .intro-content .call-engineer-form .phone-input {
+  width: 270px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  margin: 20px auto;
+  outline: none;
+  text-align: center;
+  font-family: 'Open Sans Regular';
+  color: #999999;
+  font-size: 15px;
+}
+
+.intro .intro-content .call-engineer-form .send-btn {
+  width: 270px;
+  height: 80px;
+  font-family: 'Open Sans Bold';
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+  border-radius: 10px;
+  border: 1px solid #ffc600;
+  background-color: #e8e8e8;
+  outline: none;
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+  cursor: pointer;
+}
+
+.intro .intro-content .call-engineer-form .form-notice {
+  font-family: 'Open Sans Regular';
+  font-size: 11px;
+  color: #666666;
+  margin: 20px auto 0;
 }
 
 /*Our works*/
@@ -106,7 +217,7 @@ header .header-content .contacts .call-link {
 
 .our-works .our-works-header .our-works-title {
   font-family: 'Open Sans Bold';
-  font-size: 32px;
+  font-size: 30px;
   color: #333333;
   margin: 80px auto 30px;
 }
@@ -160,7 +271,7 @@ header .header-content .contacts .call-link {
 
 .guarantees .guarantees-header .guarantees-title {
   font-family: 'Open Sans Bold';
-  font-size: 32px;
+  font-size: 30px;
   color: #ffffff;
   margin: 0 0 20px 0;
 }
@@ -207,7 +318,7 @@ header .header-content .contacts .call-link {
 
 .payment-options .payment-header .payment-title {
   font-family: 'Open Sans Bold';
-  font-size: 32px;
+  font-size: 30px;
   color: #333333;
 }
 
@@ -276,7 +387,7 @@ footer .footer-body {
 
 footer .footer-body .copyright {
   font-family: 'Open Sans Regular';
-  font-size: 16px;
+  font-size: 15px;
   color: #000000;
 }
 
@@ -293,7 +404,7 @@ footer .footer-body .footer-contacts .footer-phone {
 
 footer .footer-body .footer-contacts .footer-email {
   font-family: 'Open Sans Regular';
-  font-size: 16px;
+  font-size: 14px;
   margin: 10px 0 0 0;
   color: #42a1db;
 }
