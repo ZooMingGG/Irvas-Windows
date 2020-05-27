@@ -69,7 +69,8 @@
                         </div>
                     </div>
                     <form action="#" class="call-engineer-form">
-                        <h2 class="form-title">Запишіться сьогодні на 
+                        <h2 class="form-title">
+                            Запишіться сьогодні на 
                             <br>  
                             <span class="form-subtitle">
                                 безкоштовний замір
@@ -348,14 +349,20 @@
     </footer>
     <div class="popup">
         <div class="popup-dialog">
-            <div class="popup-content text-center">
-                <button type="button" class="popup-close"><strong>&times;</strong></button>
+            <div class="popup-content">
                 <div class="popup-form">
                     <form class="form" action="#">
-                        <h2>Введіть ваші дані <br>і натисніть замовити дзвінок</h2>
-                        <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
-                        <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
-                        <button class="text-uppercase btn-block button" name="submit" type="submit">Замовити дзвінок</button>
+                        <button type="button" class="popup-close"><strong>&times;</strong></button>
+                        <h2 class="form-title">
+                            Введіть ваші дані 
+                            <br>
+                            <span class="form-subtitle">
+                                і натисніть замовити дзвінок
+                            </span>
+                        </h2>
+                        <input class="name-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="phone-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="send-btn" name="submit" type="submit">Замовити дзвінок</button>
                         <p class="form-notice">Передзвонимо протягом 10 хвилин</p>
                     </form>
                 </div>
@@ -364,14 +371,20 @@
     </div>
     <div class="popup-engineer">
         <div class="popup-dialog">
-            <div class="popup-content text-center">
-                <button type="button" class="popup-close"><strong>&times;</strong></button>
+            <div class="popup-content">
                 <div class="popup-form">
                     <form class="form" action="#">
-                        <h2>Запишіться сьогодні на  <br><span>безкоштовний замір</span></h2>
-                        <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
-                        <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
-                        <button class="text-uppercase btn-block button" name="submit" type="submit">Викликати замірника!</button>
+                        <button type="button" class="popup-close"><strong>&times;</strong></button>
+                        <h2 class="form-title">
+                            Запишіться сьогодні на 
+                            <br>  
+                            <span class="form-subtitle">
+                                безкоштовний замір
+                            </span>
+                        </h2>
+                        <input class="name-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="phone-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="send-btn" name="submit" type="submit">Викликати замірника!</button>
                         <p class="form-notice">Ваші дані конфіденційні</p>
                     </form>
                 </div>
@@ -413,28 +426,28 @@
         <div class="popup-dialog">
             <div class="popup-calc-profile-content text-center">
                 <button type="button" class="popup-calc-profile-close"><strong>&times;</strong></button>
-                    <h2>Калькулятор</h2>
-                    <h3>Виберіть тип засклення <br>і його профіль</h3>
-                    <select class="form-control" name="view" id="view-type">
-                    <option value="tree">Дерев'яне засклення</option>
-                    <option value="aluminum">Алюмінієве засклення</option>
-                    <option value="plastic">Засклення пластиковими рамами</option>
-                    <option value="french">Панорамне засклення</option>
-                    <option value="overhang">Засклення з виносом</option>
-                    </select>
-                    <img src="assets/img/modal-calc/icon-cold.png" alt="Холодне">
-                    <label>
-                        <input class="checkbox" type="checkbox" name="checkbox-test">
-                        <span class="checkbox-custom" id="cold"></span>
-                        <span class="label">Холодне</span>
-                    </label>
-                    <img src="assets/img/modal-calc/icon-warm.png" alt="Тепле">
-                    <label>
-                        <input class="checkbox" type="checkbox" name="checkbox-test">
-                        <span class="checkbox-custom" id="warm"></span>
-                        <span class="label">Тепле</span>
-                    </label>
-                    <button class="button popup-calc-profile-button">Далі</button>
+                <h2>Калькулятор</h2>
+                <h3>Виберіть тип засклення <br>і його профіль</h3>
+                <select class="form-control" name="view" id="view-type">
+                <option value="tree">Дерев'яне засклення</option>
+                <option value="aluminum">Алюмінієве засклення</option>
+                <option value="plastic">Засклення пластиковими рамами</option>
+                <option value="french">Панорамне засклення</option>
+                <option value="overhang">Засклення з виносом</option>
+                </select>
+                <img src="assets/img/modal-calc/icon-cold.png" alt="Холодне">
+                <label>
+                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                    <span class="checkbox-custom" id="cold"></span>
+                    <span class="label">Холодне</span>
+                </label>
+                <img src="assets/img/modal-calc/icon-warm.png" alt="Тепле">
+                <label>
+                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                    <span class="checkbox-custom" id="warm"></span>
+                    <span class="label">Тепле</span>
+                </label>
+                <button class="button popup-calc-profile-button">Далі</button>
             </div>
         </div>
     </div> 

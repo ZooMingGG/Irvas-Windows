@@ -651,6 +651,119 @@ footer {
 }
 
 /*Modals*/
+.popup {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .popup-dialog {
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup-content {
+        width: 100%;
+        height: 100%;
+    }
+    .popup-form {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .form {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        width: 370px;
+        height: 442px;
+        background-color: #ffffff;
+
+        .popup-close {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 90%;
+            width: 30px;
+            font-size: 40px;
+            height: 30px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .form-title {
+            font-family: 'Open Sans Bold';
+            font-size: 20px;
+            line-height: 38px;
+            color: #333333;
+    
+            .form-subtitle {
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+        }
+    
+        .name-input {
+            width: 270px;
+            height: 60px;
+            border-radius: 10px;
+            border: 1px solid #d1d1d1;
+            margin: 10px auto 0;
+            outline: none;
+            text-align: center;
+            font-family: 'Open Sans Regular';
+            color: #999999;
+            font-size: 15px;
+        }
+    
+        .phone-input {
+            width: 270px;
+            height: 60px;
+            border-radius: 10px;
+            border: 1px solid #d1d1d1;
+            margin: 20px auto;
+            outline: none;
+            text-align: center;
+            font-family: 'Open Sans Regular';
+            color: #999999;
+            font-size: 15px;
+        }
+    
+        .send-btn {
+            width: 270px;
+            height: 80px;
+            font-family: 'Open Sans Bold';
+            font-size: 18px;
+            color: #000000;
+            text-transform: uppercase;
+            box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+            border-radius: 10px;
+            border: 1px solid #ffc600;
+            background-color: #e8e8e8;
+            outline: none;
+            margin: 0 auto;
+            background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+            cursor: pointer;
+        }
+    
+        .form-notice {
+            font-family: 'Open Sans Regular';
+            font-size: 11px;
+            color: #666666;
+            margin: 20px auto 0;
+        }
+    }
+}
+
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
 }
