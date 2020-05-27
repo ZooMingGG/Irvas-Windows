@@ -12,6 +12,22 @@
     max-width: 100%;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #333333;
+    opacity: 0.7;
+}
+
+.overlay-visible {
+    display: block;
+}
+
 /*Header*/
 header {
     padding: 20px 0;
@@ -651,7 +667,7 @@ footer {
 }
 
 /*Modals*/
-.popup {
+.popup, .popup-engineer {
     display: block;
     position: fixed;
     height: 100%;
@@ -709,6 +725,10 @@ footer {
             .form-subtitle {
                 font-size: 24px;
                 text-transform: uppercase;
+            }
+
+            .popup-subtitle {
+                font-size: 20px;
             }
         }
     
