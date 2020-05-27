@@ -344,6 +344,163 @@ header .header-content .contacts .call-link {
   color: #000000;
 }
 
+/*Special offer*/
+.special-offer {
+  background: url("../images/special-offer/special-offer-background.jpg") center no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.special-offer .special-offer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.special-offer .special-offer-content .special-offer-title {
+  font-family: 'Open Sans Bold';
+  margin: 0;
+  font-size: 48px;
+  color: #008cce;
+}
+
+.special-offer .special-offer-content .special-offer-text {
+  font-family: 'Open Sans Regular';
+  margin: 80px 0;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.special-offer .special-offer-content .timer-body {
+  width: 260px;
+  height: 160px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.special-offer .special-offer-content .timer-body .timer-title {
+  font-family: 'Open Sans Regular';
+  margin: 20px 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+.special-offer .special-offer-content .timer-body .timer {
+  margin: 0 auto;
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-offer .special-offer-content .timer-body .timer .timer-section {
+  width: 40px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  font-family: 'Open Sans Regular';
+  font-size: 28px;
+  text-align: center;
+  line-height: 52px;
+  color: #efefef;
+}
+
+.special-offer .special-offer-content .timer-body .timer-notice {
+  margin: 15px auto 0;
+  width: 210px;
+  font-family: 'Open Sans Semibold';
+  font-size: 13px;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-offer .special-offer-content .timer-body .timer-notice .notice-text:nth-child(1) {
+  margin: 0 15px 0 5px;
+}
+
+.special-offer .special-offer-content .timer-body .timer-notice .notice-text:nth-child(2) {
+  margin: 0 10px 0 5px;
+}
+
+.special-offer .special-offer-content .timer-body .timer-notice .notice-text:nth-child(3) {
+  margin: 0 5px 0 0;
+}
+
+.special-offer .special-offer-content .call-engineer-form {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 370px;
+  height: 442px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.special-offer .special-offer-content .call-engineer-form .form-title {
+  font-family: 'Open Sans Bold';
+  font-size: 20px;
+  line-height: 38px;
+  color: #333333;
+}
+
+.special-offer .special-offer-content .call-engineer-form .form-title .form-subtitle {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.special-offer .special-offer-content .call-engineer-form .name-input {
+  width: 270px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  margin: 10px auto 0;
+  outline: none;
+  text-align: center;
+  font-family: 'Open Sans Regular';
+  color: #999999;
+  font-size: 15px;
+}
+
+.special-offer .special-offer-content .call-engineer-form .phone-input {
+  width: 270px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  margin: 20px auto;
+  outline: none;
+  text-align: center;
+  font-family: 'Open Sans Regular';
+  color: #999999;
+  font-size: 15px;
+}
+
+.special-offer .special-offer-content .call-engineer-form .send-btn {
+  width: 270px;
+  height: 80px;
+  font-family: 'Open Sans Bold';
+  font-size: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+  border-radius: 10px;
+  border: 1px solid #ffc600;
+  background-color: #e8e8e8;
+  outline: none;
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+  cursor: pointer;
+}
+
+.special-offer .special-offer-content .call-engineer-form .form-notice {
+  font-family: 'Open Sans Regular';
+  font-size: 11px;
+  color: #666666;
+  margin: 20px auto 0;
+}
+
 /*Questions*/
 .questions {
   background-color: #00a0eb;
@@ -407,6 +564,30 @@ footer .footer-body .footer-contacts .footer-email {
   font-size: 14px;
   margin: 10px 0 0 0;
   color: #42a1db;
+}
+
+/*Scroll*/
+.scroll-btn {
+  display: none;
+  padding: 12px 0 0;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0576ab;
+  cursor: pointer;
+  text-align: center;
+}
+
+.scroll-btn .scroll-arrow {
+  width: 40px;
+  height: 30px;
+}
+
+.visible {
+  display: block;
 }
 
 /*Modals*/
