@@ -502,6 +502,65 @@ header {
     }
 }
 
+/*Contacts*/
+.our-contacts {
+    padding: 80px 0;
+
+    .contacts-header {
+        text-align: center;
+
+        .contacts-title {
+            font-family: 'Opne Sans Bold';
+            font-size: 30px;
+            color: #333333;
+            margin: 0 0 10px;
+        }
+    }
+
+    .contacts-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 80px 0 0;
+
+        iframe {
+            width: 569px;
+            height: 467px;
+            max-width: 100%;
+            border: none;
+        }
+
+        .contacts-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 467px;
+
+            .contact-title {
+                font-family: 'Open Sans Regular';
+                font-size: 15px;
+                color: #008cce;
+                margin: 0 0 20px;
+            }
+        }
+
+        .first-address-text, .second-address-text {
+            font-family: 'Open Sans Semibold';
+            font-size: 18px;
+            color: #000000;
+            margin: 20px 0 0;
+        }
+
+        .phone-link, .email-link, .work-time-text {
+            font-family: 'Open Sans Semibold';
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+            margin: 20px 0 0;
+        }
+    }
+}
+
 /*Questions*/
 .questions {
     background-color: #00a0eb;

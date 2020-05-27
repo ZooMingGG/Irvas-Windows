@@ -501,6 +501,65 @@ header .header-content .contacts .call-link {
   margin: 20px auto 0;
 }
 
+/*Contacts*/
+.our-contacts {
+  padding: 80px 0;
+}
+
+.our-contacts .contacts-header {
+  text-align: center;
+}
+
+.our-contacts .contacts-header .contacts-title {
+  font-family: 'Opne Sans Bold';
+  font-size: 30px;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.our-contacts .contacts-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 80px 0 0;
+}
+
+.our-contacts .contacts-content iframe {
+  width: 569px;
+  height: 467px;
+  max-width: 100%;
+  border: none;
+}
+
+.our-contacts .contacts-content .contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 467px;
+}
+
+.our-contacts .contacts-content .contacts-info .contact-title {
+  font-family: 'Open Sans Regular';
+  font-size: 15px;
+  color: #008cce;
+  margin: 0 0 20px;
+}
+
+.our-contacts .contacts-content .first-address-text, .our-contacts .contacts-content .second-address-text {
+  font-family: 'Open Sans Semibold';
+  font-size: 18px;
+  color: #000000;
+  margin: 20px 0 0;
+}
+
+.our-contacts .contacts-content .phone-link, .our-contacts .contacts-content .email-link, .our-contacts .contacts-content .work-time-text {
+  font-family: 'Open Sans Semibold';
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000;
+  margin: 20px 0 0;
+}
+
 /*Questions*/
 .questions {
   background-color: #00a0eb;
