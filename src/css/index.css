@@ -666,7 +666,7 @@ footer .footer-body .footer-contacts .footer-email {
 }
 
 /*Modals*/
-.popup, .popup-engineer {
+.popup, .popup-engineer, .popup-calc-end {
   display: block;
   position: fixed;
   height: 100%;
@@ -677,22 +677,22 @@ footer .footer-body .footer-contacts .footer-email {
   z-index: 1;
 }
 
-.popup .popup-dialog, .popup-engineer .popup-dialog {
+.popup .popup-dialog, .popup-engineer .popup-dialog, .popup-calc-end .popup-dialog {
   width: 100%;
   height: 100%;
 }
 
-.popup .popup-content, .popup-engineer .popup-content {
+.popup .popup-content, .popup-engineer .popup-content, .popup-calc-end .popup-content {
   width: 100%;
   height: 100%;
 }
 
-.popup .popup-form, .popup-engineer .popup-form {
+.popup .popup-form, .popup-engineer .popup-form, .popup-calc-end .popup-form {
   width: 100%;
   height: 100%;
 }
 
-.popup .form, .popup-engineer .form {
+.popup .form, .popup-engineer .form, .popup-calc-end .form {
   position: fixed;
   top: 10%;
   left: 50%;
@@ -705,7 +705,7 @@ footer .footer-body .footer-contacts .footer-email {
   background-color: #ffffff;
 }
 
-.popup .form .popup-close, .popup-engineer .form .popup-close {
+.popup .form .popup-close, .popup-engineer .form .popup-close, .popup-calc-end .form .popup-close {
   background-color: transparent;
   border: none;
   position: absolute;
@@ -718,23 +718,23 @@ footer .footer-body .footer-contacts .footer-email {
   cursor: pointer;
 }
 
-.popup .form .form-title, .popup-engineer .form .form-title {
+.popup .form .form-title, .popup-engineer .form .form-title, .popup-calc-end .form .form-title {
   font-family: 'Open Sans Bold';
   font-size: 20px;
   line-height: 38px;
   color: #333333;
 }
 
-.popup .form .form-title .form-subtitle, .popup-engineer .form .form-title .form-subtitle {
+.popup .form .form-title .form-subtitle, .popup-engineer .form .form-title .form-subtitle, .popup-calc-end .form .form-title .form-subtitle {
   font-size: 24px;
   text-transform: uppercase;
 }
 
-.popup .form .form-title .popup-subtitle, .popup-engineer .form .form-title .popup-subtitle {
+.popup .form .form-title .popup-subtitle, .popup-engineer .form .form-title .popup-subtitle, .popup-calc-end .form .form-title .popup-subtitle {
   font-size: 20px;
 }
 
-.popup .form .name-input, .popup-engineer .form .name-input {
+.popup .form .name-input, .popup-engineer .form .name-input, .popup-calc-end .form .name-input {
   width: 270px;
   height: 60px;
   border-radius: 10px;
@@ -747,7 +747,7 @@ footer .footer-body .footer-contacts .footer-email {
   font-size: 15px;
 }
 
-.popup .form .phone-input, .popup-engineer .form .phone-input {
+.popup .form .phone-input, .popup-engineer .form .phone-input, .popup-calc-end .form .phone-input {
   width: 270px;
   height: 60px;
   border-radius: 10px;
@@ -760,7 +760,7 @@ footer .footer-body .footer-contacts .footer-email {
   font-size: 15px;
 }
 
-.popup .form .send-btn, .popup-engineer .form .send-btn {
+.popup .form .send-btn, .popup-engineer .form .send-btn, .popup-calc-end .form .send-btn {
   width: 270px;
   height: 80px;
   font-family: 'Open Sans Bold';
@@ -777,7 +777,7 @@ footer .footer-body .footer-contacts .footer-email {
   cursor: pointer;
 }
 
-.popup .form .form-notice, .popup-engineer .form .form-notice {
+.popup .form .form-notice, .popup-engineer .form .form-notice, .popup-calc-end .form .form-notice {
   font-family: 'Open Sans Regular';
   font-size: 11px;
   color: #666666;

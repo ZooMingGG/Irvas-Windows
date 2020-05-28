@@ -455,13 +455,18 @@
     <div class="popup-calc-end">
         <div class="popup-dialog">
             <div class="popup-content text-center">
-                <button type="button" class="popup-calc-end-close"><strong>&times;</strong></button>
                 <div class="popup-form">
                     <form class="form" action="#">
-                        <h2>Дякуюємо за звернення! <br>Залиште свої дані</h2>
-                        <input class="form-control form-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
-                        <input class="form-control form-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
-                        <button class="text-uppercase btn-block button" name="submit" type="submit">Розрахувати вартість</button>
+                        <button type="button" class="popup-close"><strong>&times;</strong></button>
+                        <h2 class="form-title">Дякуюємо за звернення! 
+                            <br>
+                            <span class="form-subtitle">
+                                Залиште свої дані
+                            </span>
+                        </h2>
+                        <input class="name-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="phone-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="send-btn" name="submit" type="submit">Розрахувати вартість</button>
                         <p class="form-notice">Передзвонимо протягом 10 хвилин</p>
                     </form>
                 </div>
