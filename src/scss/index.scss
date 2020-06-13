@@ -221,6 +221,78 @@ header {
     }
 }
 
+/*Glazing*/
+.glazing {
+    padding: 80px 0 100px;
+
+    .glazing-header {
+        text-align: center;
+
+        .glazing-title {
+            font-family: 'Open Sans Bold';
+            font-size: 30px;
+            color: #333333;
+            margin: 0 auto 30px;
+            text-transform: uppercase;
+        }
+        
+        .glazing-line {
+            margin: 0 0 80px;
+        }
+    }
+
+    .glazing-tabs {
+        margin: 0 auto;
+        width: 1020px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .tab-item {
+            cursor: pointer;
+            text-align: center;
+
+            .tab-item-info {
+                margin: 20px 0 0;
+                font-family: 'Open Sans Semibold';
+                color: #249ae6;
+                font-size: 18px;
+                line-height: 26px;
+                text-decoration: underline;
+                transition: all 0.2s;
+            }
+        }
+
+        .tab-item:hover .tab-item-info {
+            color: #464646;
+            text-decoration: none;
+        }
+    }
+
+    .glazing-items {
+        margin: 35px 0 0;
+        display: flex;
+        max-width: 100%;
+        
+        .glazing-item {
+            width: 50%;
+            background-color: red;
+        }
+
+        .cold {
+            border-top: 5px solid #0d8fe3;
+            border-top-left-radius: 5px;
+            background: url('../images/glazing/background-cold.png');
+        }
+
+        .warm {
+            border-top: 5px solid #ffb903;
+            border-top-right-radius: 5px;  
+            background: url('../images/glazing/background-warm.png'); 
+        }
+    }
+}
+
 /*Our works*/
 .our-works {
     padding: 0 0 60px;
