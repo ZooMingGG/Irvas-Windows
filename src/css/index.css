@@ -281,8 +281,28 @@ header .header-content .contacts .call-link {
   width: 50%;
 }
 
-.glazing .glazing-items .glazing-item-img {
+.glazing .glazing-items .glazing-item .inner-wrapper {
+  margin: 0 auto;
+  max-width: 466px;
+}
+
+.glazing .glazing-items .glazing-item .glazing-item-img {
   max-width: 100%;
+}
+
+.glazing .glazing-items .glazing-item .glazing-item-title {
+  text-align: center;
+  margin: 25px auto;
+  font-family: 'Open Sans Bold';
+  font-size: 20px;
+}
+
+.glazing .glazing-items .glazing-item .title-cold {
+  color: #0d8fe3;
+}
+
+.glazing .glazing-items .glazing-item .title-warm {
+  color: #ffb903;
 }
 
 .glazing .glazing-items .cold {

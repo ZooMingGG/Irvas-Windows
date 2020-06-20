@@ -273,13 +273,33 @@ header {
         margin: 35px 0 0;
         display: flex;
         max-width: 100%;
-        
+
         .glazing-item {
             width: 50%;
-        }
 
-        .glazing-item-img {
-            max-width: 100%;
+            .inner-wrapper {
+                margin: 0 auto;
+                max-width: 466px;
+            }
+
+            .glazing-item-img {
+                max-width: 100%;
+            }
+
+            .glazing-item-title {
+                text-align: center;
+                margin: 25px auto;
+                font-family: 'Open Sans Bold';
+                font-size: 20px;
+            }
+
+            .title-cold {
+                color: #0d8fe3;
+            }
+
+            .title-warm {
+                color: #ffb903;
+            }
         }
 
         .cold {
