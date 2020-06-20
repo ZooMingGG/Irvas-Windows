@@ -276,19 +276,42 @@ header {
         
         .glazing-item {
             width: 50%;
-            background-color: red;
+        }
+
+        .glazing-item-img {
+            max-width: 100%;
         }
 
         .cold {
+            position: relative;
             border-top: 5px solid #0d8fe3;
             border-top-left-radius: 5px;
-            background: url('../images/glazing/background-cold.png');
+            background: url('../images/glazing/background-cold.png') no-repeat;
+        }
+
+        .cold::before {
+            content: ""; 
+            position: absolute; 
+            left: 50%;
+            border: 6px solid transparent; 
+            border-top: 6px solid #0d8fe3;
+            transform: translateX(-50%);
         }
 
         .warm {
+            position: relative;
             border-top: 5px solid #ffb903;
             border-top-right-radius: 5px;  
-            background: url('../images/glazing/background-warm.png'); 
+            background: url('../images/glazing/background-warm.png') no-repeat; 
+        }
+
+        .warm::before {
+            content: ""; 
+            position: absolute; 
+            left: 50%;
+            border: 6px solid transparent; 
+            border-top: 6px solid #ffb903;
+            transform: translateX(-50%);
         }
     }
 }
@@ -328,7 +351,8 @@ header {
                 left: 50%;
                 transform: translate3d(-50%, -50%, 0);
                 position: absolute;
-                display: none;
+                opacity: 0;
+                transition: all 0.2s;
             }
 
             .our-works-img {
@@ -341,7 +365,7 @@ header {
         }
 
         .our-works-item:hover .zoom-icon {
-            display: block;
+            opacity: 1;
         }
     }
 }
