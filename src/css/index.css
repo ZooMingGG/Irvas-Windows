@@ -305,6 +305,61 @@ header .header-content .contacts .call-link {
   color: #ffb903;
 }
 
+.glazing .glazing-items .glazing-item .parameters {
+  margin: 25px 0 0 0;
+}
+
+.glazing .glazing-items .glazing-item .parameters .parameters-item {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px 0;
+}
+
+.glazing .glazing-items .glazing-item .parameters .parameters-item .parametres-item-text {
+  font-family: 'Open Sans Regular';
+  font-size: 14px;
+  color: #000000;
+  margin: 0 0 0 15px;
+}
+
+.glazing .glazing-items .glazing-item .price-body {
+  margin: 35px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.glazing .glazing-items .glazing-item .price-body .price-info {
+  margin: 0 44px 0 0;
+}
+
+.glazing .glazing-items .glazing-item .price-body .price-info .price {
+  margin: 0 0 10px 0;
+  font-family: "Open Sans Bold";
+  font-size: 20px;
+  color: #000000;
+}
+
+.glazing .glazing-items .glazing-item .price-body .price-info .price-notice {
+  margin: 0;
+  font-family: "Open Sans Regular";
+  font-size: 14px;
+  color: #000000;
+}
+
+.glazing .glazing-items .glazing-item .price-body .calc-price-button {
+  box-shadow: 0 2px 20px rgba(255, 153, 0, 0.4);
+  width: 262px;
+  height: 65px;
+  border: 1px solid #ffc600;
+  border-radius: 10px;
+  outline: none;
+  background-color: #e8e8e8;
+  background-image: linear-gradient(to bottom, #ffed26 0%, #ffb400 100%);
+  cursor: pointer;
+  font-family: "Open Sans Condensed";
+  font-size: 19px;
+}
+
 .glazing .glazing-items .cold {
   position: relative;
   border-top: 5px solid #0d8fe3;
