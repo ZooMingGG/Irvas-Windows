@@ -460,7 +460,7 @@ header {
             display: none;
             align-items: center;
 
-            .inner {
+            .decoration-item-content {
                 margin: 0 0 0 30px;
                 display: flex;
                 flex-wrap: wrap;
@@ -482,7 +482,7 @@ header {
                     }
 
                     .price {
-                        margin: 0 0 0 0;
+                        margin: 10px 0 0 0;
                         font-family: "Open Sans Bold";
                         font-size: 14px;
                         color: #0d8fe3;

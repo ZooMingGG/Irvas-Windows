@@ -464,13 +464,13 @@ header .header-content .contacts .call-link {
   align-items: center;
 }
 
-.decoration .decoration-content .decoration-item .inner {
+.decoration .decoration-content .decoration-item .decoration-item-content {
   margin: 0 0 0 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.decoration .decoration-content .decoration-item .inner .decoration-variable {
+.decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable {
   width: 33%;
   text-align: center;
   display: flex;
@@ -479,7 +479,7 @@ header .header-content .contacts .call-link {
   align-items: center;
 }
 
-.decoration .decoration-content .decoration-item .inner .decoration-variable .title {
+.decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable .title {
   margin: 10px 0 0 0;
   font-family: "Open Sans Regular";
   font-size: 14px;
@@ -487,14 +487,14 @@ header .header-content .contacts .call-link {
   color: #000000;
 }
 
-.decoration .decoration-content .decoration-item .inner .decoration-variable .price {
-  margin: 0 0 0 0;
+.decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable .price {
+  margin: 10px 0 0 0;
   font-family: "Open Sans Bold";
   font-size: 14px;
   color: #0d8fe3;
 }
 
-.decoration .decoration-content .decoration-item .inner .decoration-variable .notice {
+.decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable .notice {
   margin: 0;
   font-family: "Open Sans Regular";
   font-size: 12px;
@@ -502,7 +502,7 @@ header .header-content .contacts .call-link {
   color: #000000;
 }
 
-.decoration .decoration-content .decoration-item .inner .decoration-variable:nth-child(4), .decoration .decoration-content .decoration-item .inner .decoration-variable:nth-child(5) {
+.decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable:nth-child(4), .decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable:nth-child(5) {
   margin: 60px 0 0 0;
 }
 
