@@ -273,8 +273,9 @@ header .header-content .contacts .call-link {
 
 .glazing .glazing-items {
   margin: 35px 0 0;
-  display: flex;
+  justify-content: center;
   max-width: 100%;
+  display: none;
 }
 
 .glazing .glazing-items .glazing-item {
@@ -390,6 +391,10 @@ header .header-content .contacts .call-link {
   border: 6px solid transparent;
   border-top: 6px solid #ffb903;
   transform: translateX(-50%);
+}
+
+.glazing .visible {
+  display: flex;
 }
 
 /*Our works*/
