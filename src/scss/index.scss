@@ -456,6 +456,57 @@ header {
         display: flex;
         justify-content: space-between;
 
+        .decoration-item {
+            display: none;
+            align-items: center;
+
+            .inner {
+                margin: 0 0 0 30px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .decoration-variable {
+                    width: 33%;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .title {
+                        margin: 10px 0 0 0;
+                        font-family: "Open Sans Regular";
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #000000;
+                    }
+
+                    .price {
+                        margin: 0 0 0 0;
+                        font-family: "Open Sans Bold";
+                        font-size: 14px;
+                        color: #0d8fe3;
+                    }
+
+                    .notice {
+                        margin: 0;
+                        font-family: "Open Sans Regular";
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #000000;
+                    }
+                }
+
+                .decoration-variable:nth-child(4), .decoration-variable:nth-child(5) {
+                    margin: 60px 0 0 0;
+                }
+            }
+        }
+
+        .visible {
+            display: flex;
+        }
+
         .call-engineer-form {
             display: flex;
             flex-flow: column wrap;
