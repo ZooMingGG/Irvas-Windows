@@ -241,12 +241,37 @@ header {
         }
     }
 
-    .glazing-tabs {
+    .slider-wrapper {
+        display: none;
+        // display: flex;
+        align-items: center;
+
+        .next-arrow, .prev-arrow {
+            width: 30px;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+
+    .glazing-tabs, .glazing-slider {
+        min-width: 0;
         margin: 0 auto;
         width: 1020px;
         max-width: 100%;
         display: flex;
         justify-content: space-between;
+
+        .slick-list {
+            overflow: hidden;
+            
+            .slick-track {
+                display: flex;
+
+                .slick-slide {
+                    outline: none;
+                }
+            }
+        }
 
         .tab-item {
             cursor: pointer;
