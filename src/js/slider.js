@@ -29,4 +29,28 @@ $( document ).ready(function() {
             }
         ]
     });
+
+    $('.decoration-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow'),
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+        ]
+    });
 });

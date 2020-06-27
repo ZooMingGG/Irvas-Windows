@@ -443,12 +443,37 @@ header .header-content .contacts .call-link {
   margin: 0 0 80px;
 }
 
-.decoration .decoration-tabs {
+.decoration .decoration-slider-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.decoration .decoration-slider-wrapper .next-arrow, .decoration .decoration-slider-wrapper .prev-arrow {
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  margin: -40px 10px 0 10px;
+}
+
+.decoration .decoration-tabs, .decoration .decoration-slider {
+  min-width: 0;
   margin: 0 0 40px;
   display: flex;
 }
 
-.decoration .decoration-tabs .tab {
+.decoration .decoration-tabs .slick-list, .decoration .decoration-slider .slick-list {
+  overflow: hidden;
+}
+
+.decoration .decoration-tabs .slick-list .slick-track, .decoration .decoration-slider .slick-list .slick-track {
+  display: flex;
+}
+
+.decoration .decoration-tabs .slick-list .slick-track .slick-slide, .decoration .decoration-slider .slick-list .slick-track .slick-slide {
+  outline: none;
+}
+
+.decoration .decoration-tabs .tab, .decoration .decoration-slider .tab {
   position: relative;
   width: 300px;
   height: 100px;
@@ -461,7 +486,7 @@ header .header-content .contacts .call-link {
   cursor: pointer;
 }
 
-.decoration .decoration-tabs .active {
+.decoration .decoration-tabs .active, .decoration .decoration-slider .active {
   background-color: #ededed;
   border-top: 10px solid #0085db;
   line-height: 80px;
@@ -469,7 +494,7 @@ header .header-content .contacts .call-link {
   text-decoration: none;
 }
 
-.decoration .decoration-tabs .active::after {
+.decoration .decoration-tabs .active::after, .decoration .decoration-slider .active::after {
   content: "";
   position: absolute;
   left: 50%;
