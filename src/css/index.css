@@ -1446,6 +1446,30 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .visible {
     display: flex;
   }
+  /*Our-cintacts*/
+  .our-contacts {
+    padding: 40px 0;
+  }
+  .our-contacts .contacts-line {
+    margin: 20 0 40px 0;
+  }
+  .our-contacts .contacts-content {
+    justify-content: space-around;
+    margin: 30px 0 0;
+    text-align: center;
+  }
+  .our-contacts .contacts-content iframe {
+    margin: 0 0 20px 0;
+  }
+  .our-contacts .contacts-content .contacts-info .contact-title {
+    margin: 0 0 5px 0;
+  }
+  .our-contacts .contacts-content .first-address-text, .our-contacts .contacts-content .second-address-text {
+    margin: 0;
+  }
+  .our-contacts .contacts-content .phone-link, .our-contacts .contacts-content .email-link, .our-contacts .contacts-content .work-time-text {
+    margin: 0;
+  }
 }
 
 @media (max-width: 990px) {

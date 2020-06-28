@@ -1450,6 +1450,38 @@ footer {
             display: flex; 
         }
     }
+/*Our-cintacts*/
+    .our-contacts {
+        padding: 40px 0;
+
+        .contacts-line {
+            margin: 20 0 40px 0;
+        }   
+
+        .contacts-content {
+            justify-content: space-around;
+            margin: 30px 0 0;
+            text-align: center;
+
+            iframe {
+                margin: 0 0 20px 0;
+            }
+
+            .contacts-info {
+                .contact-title {
+                    margin: 0 0 5px 0;
+                }
+            }
+
+            .first-address-text, .second-address-text {
+                margin: 0;
+            }
+
+            .phone-link, .email-link, .work-time-text {
+                margin: 0;
+            }
+        }
+    }
 }
 
 @media (max-width: 990px) {
