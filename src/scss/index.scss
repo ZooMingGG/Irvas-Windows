@@ -243,7 +243,6 @@ header {
 
     .slider-wrapper {
         display: none;
-        // display: flex;
         align-items: center;
 
         .next-arrow, .prev-arrow {
@@ -443,7 +442,7 @@ header {
     }
 
     .decoration-slider-wrapper {
-        display: flex;
+        display: none;
         align-items: center;
 
         .next-arrow, .prev-arrow {
@@ -1355,6 +1354,7 @@ footer {
             font-family: 'Open Sans Regular';
             color: #333333;
             border: 1px solid #777777;
+            margin: 0 0 10px;
         }
 
         .select-img {
@@ -1425,7 +1425,7 @@ footer {
     }
 }
 
-.popup, .popup-engineer, .popup-calc, .popup-calc-end {
+.popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
 }
 
