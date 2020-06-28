@@ -1446,7 +1446,7 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .visible {
     display: flex;
   }
-  /*Our-cintacts*/
+  /*Our contacts*/
   .our-contacts {
     padding: 40px 0;
   }
@@ -1628,6 +1628,9 @@ footer .footer-body .footer-contacts .footer-email {
   footer .footer-body .footer-contacts {
     text-align: center;
     margin: 15px 0;
+  }
+  footer .footer-body .footer-logo {
+    margin: 0 10px;
   }
 }
 /*# sourceMappingURL=index.css.map */
