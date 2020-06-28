@@ -1522,6 +1522,15 @@ footer {
             }
         }   
     }
+/*Questions*/
+    .questions {
+        padding: 40px 0;
+
+        .questions-body {
+            justify-content: space-around;
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 770px) {
@@ -1662,6 +1671,10 @@ footer {
                 }
             }
         }
+    }
+/*Questions*/
+    .questions {
+        padding: 0;
     }
 }
 
