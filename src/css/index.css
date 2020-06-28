@@ -248,7 +248,7 @@ header .header-content .contacts .call-link {
   align-items: center;
 }
 
-.glazing .slider-wrapper .next-arrow, .glazing .slider-wrapper .prev-arrow {
+.glazing .slider-wrapper .decoration-next-arrow, .glazing .slider-wrapper .decoration-prev-arrow {
   width: 30px;
   height: 50px;
   cursor: pointer;
@@ -390,6 +390,7 @@ header .header-content .contacts .call-link {
   border-top: 5px solid #0d8fe3;
   border-top-left-radius: 5px;
   background: url("../images/glazing/background-cold.png") no-repeat;
+  background-size: cover;
 }
 
 .glazing .glazing-items .cold::before {
@@ -406,6 +407,7 @@ header .header-content .contacts .call-link {
   border-top: 5px solid #ffb903;
   border-top-right-radius: 5px;
   background: url("../images/glazing/background-warm.png") no-repeat;
+  background-size: cover;
 }
 
 .glazing .glazing-items .warm::before {
@@ -1430,6 +1432,22 @@ footer .footer-body .footer-contacts .footer-email {
 }
 
 /*Media*/
+@media (max-width: 1200px) {
+  /*Glazing*/
+  .glazing {
+    padding: 40px 0 50px;
+  }
+  .glazing .slider-wrapper {
+    display: flex;
+  }
+  .glazing .glazing-tabs {
+    display: none;
+  }
+  .glazing .visible {
+    display: flex;
+  }
+}
+
 @media (max-width: 990px) {
   /*Header*/
   header .header-content {
@@ -1452,6 +1470,27 @@ footer .footer-body .footer-contacts .footer-email {
   }
   .intro .intro-content .call-engineer-form {
     margin: 20px 0 0 20px;
+  }
+  /*Glazing*/
+  .glazing .glazing-header .glazing-title {
+    font-size: 24px;
+  }
+  .glazing .glazing-header .glazing-line {
+    margin: 0 0 20px;
+  }
+  .glazing .cold {
+    border-top-right-radius: 5px;
+  }
+  .glazing .warm {
+    border-top-right-radius: 5px;
+  }
+  .glazing .glazing-items {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .glazing .glazing-items .glazing-item {
+    width: 100%;
+    margin: 40px 0 0 0;
   }
 }
 
@@ -1513,6 +1552,34 @@ footer .footer-body .footer-contacts .footer-email {
   }
   .intro .intro-content .call-engineer-form .form-title .form-subtitle {
     font-size: 20px;
+  }
+  /*Glazing*/
+  .glazing .glazing-items .glazing-item .glazing-item-img {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .glazing .glazing-items .glazing-item .parameters .parameters-item .parametres-item-text {
+    font-size: 12px;
+  }
+  .glazing .glazing-items .glazing-item .price-body {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .glazing .glazing-items .glazing-item .price-body .price-info {
+    margin: 0 5px 5px 0;
+  }
+  .glazing .glazing-items .glazing-item .price-body .price-info .price {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+  }
+  .glazing .glazing-items .glazing-item .price-body .price-info .price-notice {
+    font-size: 10px;
+  }
+  .glazing .glazing-items .glazing-item .price-body .calc-price-button {
+    font-size: 14px;
+    max-width: 60%;
   }
 }
 /*# sourceMappingURL=index.css.map */

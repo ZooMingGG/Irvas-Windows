@@ -246,7 +246,7 @@ header {
         display: none;
         align-items: center;
 
-        .next-arrow, .prev-arrow {
+        .decoration-next-arrow, .decoration-prev-arrow {
             width: 30px;
             height: 50px;
             cursor: pointer;
@@ -388,6 +388,7 @@ header {
             border-top: 5px solid #0d8fe3;
             border-top-left-radius: 5px;
             background: url('../images/glazing/background-cold.png') no-repeat;
+            background-size: cover;
         }
 
         .cold::before {
@@ -404,6 +405,7 @@ header {
             border-top: 5px solid #ffb903;
             border-top-right-radius: 5px;  
             background: url('../images/glazing/background-warm.png') no-repeat; 
+            background-size: cover;
         }
 
         .warm::before {
@@ -1432,7 +1434,22 @@ footer {
 
 /*Media*/
 @media (max-width: 1200px) {
-  
+/*Glazing*/
+    .glazing {
+        padding: 40px 0 50px;
+
+        .slider-wrapper {
+            display: flex;
+        }
+
+        .glazing-tabs {
+            display: none;
+        }
+
+        .visible {
+            display: flex; 
+        }
+    }
 }
 
 @media (max-width: 990px) {
@@ -1472,6 +1489,38 @@ footer {
     
             }
         }
+    }
+/*Glazing*/
+    .glazing {
+
+        .glazing-header {
+
+            .glazing-title {
+                font-size: 24px;
+            }
+            
+            .glazing-line {
+                margin: 0 0 20px;
+            }
+        }
+
+        .cold {
+            border-top-right-radius: 5px;
+        }
+
+        .warm {
+            border-top-right-radius: 5px;
+        }
+
+        .glazing-items {
+            flex-wrap: wrap;
+            margin: 0;
+
+            .glazing-item {
+                width: 100%;
+                margin: 40px 0 0 0;
+            }
+        }   
     }
 }
 
@@ -1560,6 +1609,55 @@ footer {
 
                     .form-subtitle {
                         font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+/*Glazing*/
+    .glazing {
+
+        .glazing-items {
+
+            .glazing-item {
+
+                .glazing-item-img {
+                    max-width: 90%;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .parameters {
+
+                    .parameters-item {
+        
+                        .parametres-item-text {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .price-body {
+                    margin: 20px 0 0 0;
+                    display: flex;
+                    justify-content: space-around;
+
+                    .price-info {
+                        margin: 0 5px 5px 0;
+
+                        .price {
+                            margin: 0 0 5px 0;
+                            font-size: 14px;
+                        }
+        
+                        .price-notice {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .calc-price-button {
+                        font-size: 14px;
+                        max-width: 60%;
                     }
                 }
             }

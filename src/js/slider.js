@@ -3,8 +3,8 @@ $( document ).ready(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: $('.prev-arrow'),
-        nextArrow: $('.next-arrow'),
+        prevArrow: $('.decoration-prev-arrow'),
+        nextArrow: $('.decoration-next-arrow'),
         responsive: [
             {
               breakpoint: 900,
