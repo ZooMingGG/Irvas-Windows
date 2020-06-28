@@ -1428,4 +1428,56 @@ footer .footer-body .footer-contacts .footer-email {
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
   display: none;
 }
+
+/*Media*/
+@media (max-width: 990px) {
+  /*Header*/
+  header .header-content {
+    justify-content: space-around;
+  }
+  header .header-content .header-text {
+    margin: 0 10px;
+  }
+  header .header-content .work-time {
+    margin: 0 10px;
+  }
+  header .header-content .contacts .phone {
+    margin: 20px 0 10px;
+  }
+}
+
+@media (max-width: 770px) {
+  /*Header*/
+  header .header-content {
+    justify-content: space-around;
+  }
+  header .header-content .header-text {
+    margin: 0 10px;
+  }
+  header .header-content .work-time {
+    margin: 0 10px;
+  }
+  header .header-content .contacts .phone {
+    margin: 20px 0 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  /*Header*/
+  header .header-content {
+    justify-content: space-around;
+  }
+  header .header-content .header-logo {
+    margin: 15px 0;
+  }
+  header .header-content .header-text {
+    margin: 15px 10px;
+  }
+  header .header-content .work-time {
+    margin: 15px 10px;
+  }
+  header .header-content .contacts .phone {
+    margin: 10px 0 10px;
+  }
+}
 /*# sourceMappingURL=index.css.map */
