@@ -1676,6 +1676,20 @@ footer {
     .questions {
         padding: 0;
     }
+/*Footer*/
+    footer {
+        padding: 10px 0;
+
+        .footer-body {
+            text-align: center;
+            justify-content: space-around;
+
+            .footer-contacts {
+                text-align: center;
+                margin: 15px 0;
+            }
+        }
+    }
 }
 
 
