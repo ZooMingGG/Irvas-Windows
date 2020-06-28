@@ -1022,7 +1022,7 @@
             </div>
         </div>
     </footer>
-    <div class="overlay"></div>
+    <div class="overlay overlay-visible"></div>
     <div class="popup">
         <div class="popup-dialog">
             <div class="popup-content">
@@ -1069,32 +1069,38 @@
     </div>
     <div class="popup-calc">
         <div class="popup-dialog">
-            <div class="popup-calc-content text-center">
+            <div class="popup-calc-content">
                 <button type="button" class="popup-calc-close"><strong>&times;</strong></button>
-                    <h2>Калькулятор</h2>
-                <h3>Виберіть форму балкона <br>і вкажіть розміри</h3>
+                    <h2 class="popup-calc-title">Калькулятор</h2>
+                <h3 class="popup-calc-subtitle">Виберіть форму балкона <br>і вкажіть розміри</h3>
                 <div class="balcon-icons">
-                    <span class="balcon-icons-img do-image-more">
-                        <img src="assets/img/modal-calc/balkon/ba-01.png" alt="Тип1"></span>
                     <span class="balcon-icons-img">
-                        <img src="assets/img/modal-calc/balkon/ba-02.png" alt="Тип2"></span>
+                        <img src="./images/modal-calc/balkon/ba-1.png" alt="Тип1">
+                    </span>
                     <span class="balcon-icons-img">
-                        <img src="assets/img/modal-calc/balkon/ba-03.png" alt="Тип3"></span>
+                        <img class="active" src="./images/modal-calc/balkon/ba-2.png" alt="Тип2">
+                    </span>
+                    <span class="balcon-icons-img">
+                        <img src="./images/modal-calc/balkon/ba-3.png" alt="Тип3">
+                    </span>
                     <span class="balcon-icons-img"> 
-                        <img src="assets/img/modal-calc/balkon/ba-04.png" alt="Тип4"></span>
-                    </div>
-                    <div class="big-img text-center">
-                        <img src="assets/img/modal-calc/balkon/type1.png" alt="Тип1">
-                        <img src="assets/img/modal-calc/balkon/type2.png" alt="Тип2">
-                        <img src="assets/img/modal-calc/balkon/type3.png" alt="Тип3">
-                        <img src="assets/img/modal-calc/balkon/type4.png" alt="Тип4">
-                    </div>
-                <input class="form-control" id="width" type="text" placeholder="Ширина" required>
-                <label for="width">мм</label>
-                <div class="multiplication"><strong>&times;</strong></div>
-                <input class="form-control" id="height" type="text" placeholder="Висота" required>
-                <label for="height">мм</label>
-                <button class="button popup-calc-button">Далі</button>
+                        <img src="./images/modal-calc/balkon/ba-4.png" alt="Тип4">
+                    </span>
+                </div>
+                <div class="big-img">
+                    <img class="big-img-icon visible" src="./images/modal-calc/balkon/type-1.png" alt="Тип1">
+                    <img class="big-img-icon" src="./images/modal-calc/balkon/type-2.png" alt="Тип2">
+                    <img class="big-img-icon" src="./images/modal-calc/balkon/type-3.png" alt="Тип3">
+                    <img class="big-img-icon" src="./images/modal-calc/balkon/type-4.png" alt="Тип4">
+                </div>
+                <div class="parameters">
+                    <input class="form-control" id="width" type="text" placeholder="Ширина" required>
+                    <label class="form-control-notice" for="width">мм</label>
+                    <div class="multiplication"><strong>&times;</strong></div>
+                    <input class="form-control" id="height" type="text" placeholder="Висота" required>
+                    <label class="form-control-notice" for="height">мм</label>
+                </div>
+                <button class="popup-calc-next-button">Далі</button>
             </div>
         </div>
     </div> 
