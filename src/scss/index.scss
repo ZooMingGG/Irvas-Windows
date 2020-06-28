@@ -1459,6 +1459,20 @@ footer {
             }
         }
     }
+/*Intro*/
+    .intro {
+
+        .intro-content {
+            text-align: center;
+            justify-content: space-around;
+            padding: 50px 0;
+    
+            .call-engineer-form {
+                margin: 20px 0 0 20px;
+    
+            }
+        }
+    }
 }
 
 @media (max-width: 770px) {
@@ -1511,6 +1525,42 @@ footer {
                 .phone {
                     margin: 10px 0 10px;
 
+                }
+            }
+        }
+    }
+/*Intro*/
+    .intro {
+
+        .intro-content {
+            padding: 30px 0;
+
+            .intro-title {
+                font-size: 20px;
+            }
+
+            .intro-subtitle {
+                margin: 0;
+                font-size: 45px;
+            }
+
+            .intro-icons {
+                margin: 80px 0 0;
+
+                .intro-icon {
+                    margin: 0;
+                }
+            }
+
+            .call-engineer-form {
+                margin: 20px 0 0 0;
+
+                .form-title {
+                    font-size: 18px;
+
+                    .form-subtitle {
+                        font-size: 20px;
+                    }
                 }
             }
         }
