@@ -1554,6 +1554,27 @@ footer {
             }
         }   
     }
+/*Special offer*/
+    .special-offer {
+        padding: 30px 0;
+
+        .special-offer-content {
+            justify-content: space-around;
+            text-align: center;
+
+            .special-offer-text {
+                margin: 15px 0 40px;
+            }
+
+            .timer-body {
+                margin: 0 auto;
+            }
+
+            .call-engineer-form {
+                margin: 20px;
+            }
+        }
+    }
 /*Questions*/
     .questions {
         padding: 40px 0;
@@ -1704,6 +1725,30 @@ footer {
             }
         }
     }
+/*Special offer*/
+.special-offer {
+    padding: 0;
+    
+    .special-offer-content {
+
+        .special-offer-text {
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .call-engineer-form {
+            padding: 0 10px;
+        
+            .form-title {
+                font-size: 18px;
+        
+                .form-subtitle {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
 /*Questions*/
     .questions {
         padding: 0;

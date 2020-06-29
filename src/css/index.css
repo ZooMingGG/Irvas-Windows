@@ -1516,6 +1516,23 @@ footer .footer-body .footer-contacts .footer-email {
     width: 100%;
     margin: 40px 0 0 0;
   }
+  /*Special offer*/
+  .special-offer {
+    padding: 30px 0;
+  }
+  .special-offer .special-offer-content {
+    justify-content: space-around;
+    text-align: center;
+  }
+  .special-offer .special-offer-content .special-offer-text {
+    margin: 15px 0 40px;
+  }
+  .special-offer .special-offer-content .timer-body {
+    margin: 0 auto;
+  }
+  .special-offer .special-offer-content .call-engineer-form {
+    margin: 20px;
+  }
   /*Questions*/
   .questions {
     padding: 40px 0;
@@ -1612,6 +1629,23 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .glazing-items .glazing-item .price-body .calc-price-button {
     font-size: 14px;
     max-width: 60%;
+  }
+  /*Special offer*/
+  .special-offer {
+    padding: 0;
+  }
+  .special-offer .special-offer-content .special-offer-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .special-offer .special-offer-content .call-engineer-form {
+    padding: 0 10px;
+  }
+  .special-offer .special-offer-content .call-engineer-form .form-title {
+    font-size: 18px;
+  }
+  .special-offer .special-offer-content .call-engineer-form .form-title .form-subtitle {
+    font-size: 20px;
   }
   /*Questions*/
   .questions {
