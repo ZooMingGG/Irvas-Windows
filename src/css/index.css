@@ -1744,5 +1744,35 @@ footer .footer-body .footer-contacts .footer-email {
   footer .footer-body .footer-logo {
     margin: 0 10px;
   }
+  /*Modals*/
+  .popup .form, .popup-engineer .form, .popup-calc-end .form {
+    width: 95%;
+  }
+  .popup .form .form-title, .popup-engineer .form .form-title, .popup-calc-end .form .form-title {
+    font-size: 16px;
+  }
+  .popup .form .form-title .form-subtitle, .popup-engineer .form .form-title .form-subtitle, .popup-calc-end .form .form-title .form-subtitle {
+    font-size: 20px;
+  }
+  .popup .form .form-title .popup-subtitle, .popup-engineer .form .form-title .popup-subtitle, .popup-calc-end .form .form-title .popup-subtitle {
+    font-size: 20px;
+  }
+  .popup-calc {
+    max-width: 95%;
+  }
+  .popup-calc .popup-calc-content .balcon-icons .balcon-icons-img .active {
+    width: 100px;
+    height: 50px;
+  }
+  .popup-calc .popup-calc-content .balcon-icons .balcon-icons-img img {
+    width: 60px;
+    height: 30px;
+  }
+  .popup-calc-profile {
+    max-width: 95%;
+  }
+  .popup-calc-profile .popup-calc-profile-content {
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
