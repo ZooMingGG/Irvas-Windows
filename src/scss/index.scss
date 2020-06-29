@@ -1745,6 +1745,40 @@ footer {
             }
         }
     }
+/*Guarantees*/
+    .guarantees {
+        padding: 30px 0;
+
+        .guarantees-header {
+
+            .guarantees-line {
+                margin: 0 0 40px 0;
+            }
+        }
+
+        .guarantees-body {
+
+            .guarantees-items {
+                justify-content: space-around;
+
+                .guarantees-item {
+                    width: 50%;
+
+                    .guarantees-img {
+                        height: 70px;
+                    }
+
+                    .guarantees-text {
+                        font-size: 14px;
+                    }
+                }
+
+                .guarantees-item:nth-child(1), .guarantees-item:nth-child(2), .guarantees-item:nth-child(3) {
+                    margin: 0 0 40px;
+                }
+            }
+        }
+    }
 /*Payment options*/
     .payment-options {
         padding: 10px 0 40px;
@@ -1821,14 +1855,3 @@ footer {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
