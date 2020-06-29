@@ -1451,6 +1451,44 @@ footer {
             display: flex; 
         }
     }
+/*Decoration*/
+    .decoration {
+        padding: 30px 0;
+
+        .decoration-header {
+            
+            .decoration-line {
+                margin: 0 0 50px;
+            }
+        }
+
+        .decoration-slider-wrapper {
+            display: flex;
+        }
+
+        .decoration-tabs {
+            display: none;
+        }
+
+        .decoration-content {
+            display: flex;
+
+            .visible {
+                display: flex;
+            }
+
+            .call-engineer-form {
+                padding: 0 10px;
+        
+                .form-title {
+        
+                    .form-subtitle {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
 /*Our-works*/
     .our-works {
         padding: 0 0 30px;
@@ -1583,6 +1621,57 @@ footer {
             }
         }   
     }
+/*Decoration*/
+    .decoration {
+        padding: 30px 0;
+
+        .decoration-header {
+            
+            .decoration-line {
+                margin: 0 0 50px;
+            }
+        }
+
+        .decoration-slider-wrapper {
+            display: flex;
+        }
+
+        .decoration-tabs {
+            display: none;
+        }
+
+        .decoration-content {
+            display: flex;
+            flex-direction: column;
+
+            .decoration-item {
+                margin: 0 auto;
+
+                .decoration-item-content {
+                    justify-content: space-around;
+                    margin: 0;
+                }
+            }
+
+            .visible {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .call-engineer-form {
+                max-width: 95%;
+                margin: 40px auto 0;
+                padding: 0 10px;
+        
+                .form-title {
+        
+                    .form-subtitle {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 /*Payment options*/
     .payment-options {
         padding: 20px 0 40px;
@@ -1659,7 +1748,6 @@ footer {
             }
         }
     }
-  
 }
 
 @media (max-width: 575px) {
@@ -1770,6 +1858,50 @@ footer {
                     .calc-price-button {
                         font-size: 14px;
                         max-width: 60%;
+                    }
+                }
+            }
+        }
+    }
+/*Decoration*/
+    .decoration {
+
+        .decoration-header {
+
+            .decoration-title {
+                font-size: 20px;
+            }
+        }
+
+        .decoration-slider-wrapper {
+
+            .tab {
+                font-size: 14px;
+            }
+        }
+
+        .decoration-tabs {
+            display: none;
+        }
+
+        .decoration-content {
+            display: flex;
+            flex-direction: column;
+
+            .decoration-item {
+                margin: 0 auto;
+
+                .decoration-item-content {
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    .decoration-variable {
+                        width: 50%;
+                        margin: 0 0 20px 0;
+                    }
+
+                    .decoration-variable:nth-child(4), .decoration-variable:nth-child(5) {
+                        margin: 0 0 20px 0;
                     }
                 }
             }

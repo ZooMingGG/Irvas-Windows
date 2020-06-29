@@ -1446,6 +1446,31 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .visible {
     display: flex;
   }
+  /*Decoration*/
+  .decoration {
+    padding: 30px 0;
+  }
+  .decoration .decoration-header .decoration-line {
+    margin: 0 0 50px;
+  }
+  .decoration .decoration-slider-wrapper {
+    display: flex;
+  }
+  .decoration .decoration-tabs {
+    display: none;
+  }
+  .decoration .decoration-content {
+    display: flex;
+  }
+  .decoration .decoration-content .visible {
+    display: flex;
+  }
+  .decoration .decoration-content .call-engineer-form {
+    padding: 0 10px;
+  }
+  .decoration .decoration-content .call-engineer-form .form-title .form-subtitle {
+    font-size: 22px;
+  }
   /*Our-works*/
   .our-works {
     padding: 0 0 30px;
@@ -1534,6 +1559,42 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .glazing-items .glazing-item {
     width: 100%;
     margin: 40px 0 0 0;
+  }
+  /*Decoration*/
+  .decoration {
+    padding: 30px 0;
+  }
+  .decoration .decoration-header .decoration-line {
+    margin: 0 0 50px;
+  }
+  .decoration .decoration-slider-wrapper {
+    display: flex;
+  }
+  .decoration .decoration-tabs {
+    display: none;
+  }
+  .decoration .decoration-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .decoration .decoration-content .decoration-item {
+    margin: 0 auto;
+  }
+  .decoration .decoration-content .decoration-item .decoration-item-content {
+    justify-content: space-around;
+    margin: 0;
+  }
+  .decoration .decoration-content .visible {
+    display: flex;
+    flex-direction: column;
+  }
+  .decoration .decoration-content .call-engineer-form {
+    max-width: 95%;
+    margin: 40px auto 0;
+    padding: 0 10px;
+  }
+  .decoration .decoration-content .call-engineer-form .form-title .form-subtitle {
+    font-size: 18px;
   }
   /*Payment options*/
   .payment-options {
@@ -1664,6 +1725,34 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .glazing-items .glazing-item .price-body .calc-price-button {
     font-size: 14px;
     max-width: 60%;
+  }
+  /*Decoration*/
+  .decoration .decoration-header .decoration-title {
+    font-size: 20px;
+  }
+  .decoration .decoration-slider-wrapper .tab {
+    font-size: 14px;
+  }
+  .decoration .decoration-tabs {
+    display: none;
+  }
+  .decoration .decoration-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .decoration .decoration-content .decoration-item {
+    margin: 0 auto;
+  }
+  .decoration .decoration-content .decoration-item .decoration-item-content {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable {
+    width: 50%;
+    margin: 0 0 20px 0;
+  }
+  .decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable:nth-child(4), .decoration .decoration-content .decoration-item .decoration-item-content .decoration-variable:nth-child(5) {
+    margin: 0 0 20px 0;
   }
   /*Guarantees*/
   .guarantees {
