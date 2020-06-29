@@ -1516,6 +1516,22 @@ footer .footer-body .footer-contacts .footer-email {
     width: 100%;
     margin: 40px 0 0 0;
   }
+  /*Payment options*/
+  .payment-options {
+    padding: 20px 0 40px;
+  }
+  .payment-options .payment-header {
+    margin: 0 0 20px 0;
+  }
+  .payment-options .payment-items {
+    justify-content: space-around;
+  }
+  .payment-options .payment-items .payment-item {
+    margin: 30px 0 0 0;
+  }
+  .payment-options .payment-items .payment-item .payment-item-img {
+    margin: 0 20px 0 0;
+  }
   /*Special offer*/
   .special-offer {
     padding: 30px 0;
@@ -1629,6 +1645,27 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .glazing-items .glazing-item .price-body .calc-price-button {
     font-size: 14px;
     max-width: 60%;
+  }
+  /*Payment options*/
+  .payment-options {
+    padding: 10px 0 40px;
+  }
+  .payment-options .payment-header {
+    margin: 0;
+  }
+  .payment-options .payment-header .payment-title {
+    font-size: 20px;
+  }
+  .payment-options .payment-items .payment-item {
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0 0;
+  }
+  .payment-options .payment-items .payment-item .payment-item-img {
+    margin: 0;
+  }
+  .payment-options .payment-items .payment-item:nth-child(1) {
+    margin: 0;
   }
   /*Special offer*/
   .special-offer {
