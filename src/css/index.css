@@ -1446,6 +1446,25 @@ footer .footer-body .footer-contacts .footer-email {
   .glazing .visible {
     display: flex;
   }
+  /*Our-works*/
+  .our-works {
+    padding: 0 0 30px;
+  }
+  .our-works .our-works-header .our-works-title {
+    margin: 40px auto 30px;
+  }
+  .our-works .our-works-header .our-works-line {
+    margin: 0 0 40px;
+  }
+  .our-works .our-works-items {
+    justify-content: space-around;
+  }
+  .our-works .our-works-items .our-works-item {
+    margin: 0 15px 30px 15px;
+  }
+  .our-works .our-works-items .our-works-item:nth-child(4), .our-works .our-works-items .our-works-item:nth-child(8) {
+    margin: 0 15px 30px 15px;
+  }
   /*Our contacts*/
   .our-contacts {
     padding: 40px 0;

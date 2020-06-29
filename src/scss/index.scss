@@ -1450,6 +1450,34 @@ footer {
             display: flex; 
         }
     }
+/*Our-works*/
+    .our-works {
+        padding: 0 0 30px;
+
+        .our-works-header {
+
+            .our-works-title {
+                margin: 40px auto 30px ;
+            }
+            
+            .our-works-line {
+                margin: 0 0 40px;
+            }
+        }
+
+        .our-works-items {
+            justify-content: space-around;
+
+            .our-works-item {
+                margin: 0 15px 30px 15px;
+
+            }
+            
+            .our-works-item:nth-child(4), .our-works-item:nth-child(8) {
+                margin: 0 15px 30px 15px;
+            }
+        }
+    }
 /*Our contacts*/
     .our-contacts {
         padding: 40px 0;
