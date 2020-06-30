@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupCalc = document.querySelector('#popup-calc');
     const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
     const closeCallModalBtn = document.querySelector('.popup-call-close');
+    const closeCalcModalBtn = document.querySelector('.popup-calc-close');
+
 
 /*Function for showing and hiding modal windows*/
     function showModals(trigger, modal, closeBtn) {
@@ -20,12 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'hidden';
 
             modal.addEventListener('click', function(event) {
-                let form = event.target.closest('form');
+                if (modal !== popupCalc) {
+                    let form = event.target.closest('form');
 
-                if (!form) {
-                    overlay.classList.remove('overlay-visible');
-                    modal.classList.remove('modal-visible');
-                    document.body.style.overflow = '';
+                    if (!form) {
+                        overlay.classList.remove('overlay-visible');
+                        modal.classList.remove('modal-visible');
+                        document.body.style.overflow = '';
+                    }
                 }
             });
             
@@ -73,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showModals(headerPopupEngineerBtn, popupEngineer, closeEngineerModalBtn);
     showModals(callLink, popupCall, closeCallModalBtn);
     showModals(questionsLink, popupCall, closeCallModalBtn);
-    showModals(showCalcModalButton, popupCalc, closeCallModalBtn);
+    showModals(showCalcModalButton, popupCalc, closeCalcModalBtn);
 
 /*Function for show and hide scroll button*/
     function showScrollBtn() {
