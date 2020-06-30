@@ -19,8 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const hours = document.querySelector('.hours');
     const minutes = document.querySelector('.minutes');
     const seconds = document.querySelector('.seconds');
-
-
+    const glazingTabs = document.querySelectorAll('.glazing-tab');
+    const glazingSliderTabs = document.querySelectorAll('.slider-tab');
+    const modalCalcTabs = document.querySelectorAll('.balcon-icons-img');
+    const decorationTabs = document.querySelectorAll('.decoration-tab');
+    const decorationSliderTabs = document.querySelectorAll('.decoration-slider-tab');
+    const modalCalcTabsIcons = document.querySelectorAll('.balcon-icons-img > img');
+    const glazingTabsContent = document.querySelectorAll('.glazing-items');
+    const decorationTabsContent = document.querySelectorAll('.decoration-item');
+    const modalCalcTabsContent = document.querySelectorAll('.big-img-icon');
 
 /*Function for showing and hiding modal windows*/
     function showModals(trigger, modal, closeBtn) {
@@ -75,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        closeCallModalBtn.addEventListener('click', function(event) {
+        closeCallModalBtn.addEventListener('click', function() {
             overlay.classList.remove('overlay-visible');
             popupCall.classList.remove('modal-visible');
             document.body.style.overflow = '';
@@ -91,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showScrollBtn() {
         let currentCords = 0;
 
-        window.addEventListener('scroll', function(event) {
+        window.addEventListener('scroll', function() {
             if (window.pageYOffset > document.documentElement.clientHeight) {
                 if (document.documentElement.scrollTop < currentCords) {
                     scrollBtn.classList.add('visible');
@@ -106,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        scrollBtn.addEventListener('click', function(event) {
+        scrollBtn.addEventListener('click', function() {
             document.documentElement.scrollTo(0, 0);
             currentCords = 0;
         });
@@ -196,4 +203,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     countDown(deadline);
+
+/*Function for tabs*/
+    function tabs(tabs, content) {
+        tabs.forEach( (item, index) => {
+            item.addEventListener('click', (event) => {
+                let glazingTarget = event.target.closest('.tab-item');
+                let modalCalcTarget = event.target.closest('.balcon-icons-img');
+                let decorationTarget = event.target.closest('.tab');
+
+                tabs.forEach( (item) => {
+                    item.classList.remove('active');
+                });
+
+                content.forEach( (item) => {
+                    item.classList.remove('visible');
+                });
+
+                modalCalcTabsIcons.forEach( (item) => {
+                    item.classList.remove('active');
+                });
+
+                if (glazingTarget === item || modalCalcTarget === item || decorationTarget === item) {
+                    if (tabs === modalCalcTabs) {
+                        modalCalcTabsIcons[index].classList.add('active');
+                    }
+                    
+                    item.classList.add('active');
+                    content[index].classList.add('visible');
+                }
+            }); 
+        }); 
+    }
+
+    tabs(glazingTabs, glazingTabsContent);
+    tabs(glazingSliderTabs, glazingTabsContent);
+    tabs(modalCalcTabs, modalCalcTabsContent);
+    tabs(decorationTabs, decorationTabsContent);
+    tabs(decorationSliderTabs, decorationTabsContent);
 });

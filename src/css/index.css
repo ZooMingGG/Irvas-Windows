@@ -1603,6 +1603,9 @@ footer .footer-body .footer-contacts .footer-email {
   .decoration .decoration-content .decoration-item {
     margin: 0 auto;
   }
+  .decoration .decoration-content .decoration-item .decoration-item-img {
+    margin: 0 0 20px 0;
+  }
   .decoration .decoration-content .decoration-item .decoration-item-content {
     justify-content: space-around;
     margin: 0;

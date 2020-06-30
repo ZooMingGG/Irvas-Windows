@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     $('.glazing-slider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: $('.decoration-prev-arrow'),
@@ -31,7 +31,7 @@ $( document ).ready(function() {
     });
 
     $('.decoration-slider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.prev-arrow'),
