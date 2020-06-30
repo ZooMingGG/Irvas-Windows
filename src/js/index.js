@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
     const closeCallModalBtn = document.querySelector('.popup-call-close');
     const closeCalcModalBtn = document.querySelector('.popup-calc-close');
+    const days = document.querySelector('.days');
+    const hours = document.querySelector('.hours');
+    const minutes = document.querySelector('.minutes');
+    const seconds = document.querySelector('.seconds');
+
 
 
 /*Function for showing and hiding modal windows*/
@@ -134,4 +139,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showBigImgModal();
+
+/*Function for countdown timer*/
+    const deadline = '2020-08-01';
+    
+    function countDown(deadline) {
+        function getTimeRemaining(endTime) {
+            const time = Date.parse(endTime) - Date.parse( new Date() );
+            let seconds = Math.floor((time / 1000) % 60);
+            let minutes = Math.floor((time / 1000 / 60) % 60);
+            let hours = Math.floor((time / 1000 / 60 / 60) % 24);
+            let days = Math.floor((time / 1000 / 60 / 60 / 24));
+
+            return {
+                'total': time,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function setClock(endTime) {
+            const timerId = setInterval(updateClock, 1000);
+
+            function updateClock() {
+                const time = getTimeRemaining(endTime);
+
+                days.textContent = addZero(time.days);
+                hours.textContent = addZero(time.hours);
+                minutes.textContent = addZero(time.minutes);
+                seconds.textContent = addZero(time.seconds);
+
+                if (time.total <= 0) {
+                    days.textContent = '00';
+                    hours.textContent = '00';
+                    minutes.textContent = '00';
+                    seconds.textContent = '00';
+
+                    clearInterval(timerId);
+                }
+            }
+        }
+
+        function addZero(num) {
+            if (num <= 9) {
+                return '0' + num;
+            } else {
+                return num;
+            }
+        }
+
+        setClock(deadline);
+    }
+
+    countDown(deadline);
 });
