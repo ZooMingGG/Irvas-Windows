@@ -1123,6 +1123,7 @@ footer {
             position: absolute;
             top: 0;
             left: 90%;
+            z-index: 1000;
             width: 30px;
             font-size: 40px;
             height: 30px;
@@ -1431,6 +1432,10 @@ footer {
 
 .popup, .popup-engineer, .popup-calc, .popup-calc-profile, .popup-calc-end {
     display: none;
+}
+
+.modal-visible {
+    display: block;
 }
 
 /*Media*/
