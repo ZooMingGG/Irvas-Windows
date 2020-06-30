@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupEngineer = document.querySelector('#popup-engineer');
     const popupCall = document.querySelector('#popup-call');
     const popupCalc = document.querySelector('#popup-calc');
+    const bigImgModal = document.querySelector('.big-img-modal');
+    const bigImgModalIcon = document.querySelector('.big-img-modal-icon');
+    const ourWorksItems = document.querySelectorAll('.our-works-item');
     const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
     const closeCallModalBtn = document.querySelector('.popup-call-close');
     const closeCalcModalBtn = document.querySelector('.popup-calc-close');
@@ -105,4 +108,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showScrollBtn();
+
+/*Function for show modal window with big img of work*/
+    function showBigImgModal() {
+        ourWorksItems.forEach( function(item) {
+            item.addEventListener('click', (event) => {
+                let currentItem =  event.target.closest('.our-works-item');
+
+                bigImgModalIcon.src = currentItem.getAttribute('big-img-src');
+                overlay.classList.add('overlay-visible');
+                document.body.style.overflow = 'hidden';
+                bigImgModal.classList.add('modal-visible');
+            });
+        });
+
+        bigImgModal.addEventListener('click', (event) => {
+            let bigModalImg = event.target.closest('.big-img-modal-icon');
+
+            if (!bigModalImg) {
+                overlay.classList.remove('overlay-visible');
+                document.body.style.overflow = '';
+                bigImgModal.classList.remove('modal-visible');
+            }
+        });
+    }
+
+    showBigImgModal();
 });
