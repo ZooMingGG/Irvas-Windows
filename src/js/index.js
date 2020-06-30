@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /*Function for countdown timer*/
     const deadline = '2020-08-01';
-    
+
     function countDown(deadline) {
         function getTimeRemaining(endTime) {
             const time = Date.parse(endTime) - Date.parse( new Date() );
@@ -161,6 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function setClock(endTime) {
+            updateClock(endTime);
+
             const timerId = setInterval(updateClock, 1000);
 
             function updateClock() {
