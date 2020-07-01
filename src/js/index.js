@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const glazingTabsContent = document.querySelectorAll('.glazing-items');
     const decorationTabsContent = document.querySelectorAll('.decoration-item');
     const modalCalcTabsContent = document.querySelectorAll('.big-img-icon');
-    const sendButton = document.querySelector('.send-btn');
 
     // firebase.database().ref().child('contacts').push(variable);
 
@@ -258,4 +257,37 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs(modalCalcTabs, modalCalcTabsContent);
     tabs(decorationTabs, decorationTabsContent);
     tabs(decorationSliderTabs, decorationTabsContent);
+
+/*Function for send data to database*/
+    function sendReguestData(form, request) {
+        const data = {};
+        const currentForm = document.querySelector(form);
+        const formNotice = currentForm.querySelector('.form-notice');
+        const nameInput = currentForm.querySelector('.name-input');
+        const phoneInput = currentForm.querySelector('.phone-input');
+
+        phoneInput.addEventListener('input', (event) => {
+            event.target.value = event.target.value.replace(/[^0-9+-]/, '');
+        });
+
+        currentForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            data.name = nameInput.value;
+            data.phone = phoneInput.value;
+
+            firebase.database().ref().child(request).push(data);
+
+            nameInput.value = '';
+            phoneInput.value = '';
+
+            formNotice.textContent = 'Ми передзвонимо вам через 10 хвилин!';
+            formNotice.style.fontSize = '16px';
+        });
+    }
+
+    sendReguestData('.call-engineer-form', 'engineerReguests');
+    sendReguestData('.decoration-call-engineer-form', 'engineerReguests');
+    sendReguestData('.special-offer-call-engineer-form', 'engineerReguests');
+    sendReguestData('.modal-call-engineer-form', 'engineerReguests');
+    sendReguestData('.modal-call-form', 'callReguests');
 });
