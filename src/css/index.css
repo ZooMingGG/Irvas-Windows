@@ -1294,6 +1294,10 @@ footer .footer-body .footer-contacts .footer-email {
   font-size: 14px;
 }
 
+.popup-calc .popup-calc-content .parameters .error {
+  border: 1px solid red;
+}
+
 .popup-calc .popup-calc-content .parameters .form-control-notice {
   font-family: 'Open Sans Regular';
   color: #333333;
@@ -1399,6 +1403,10 @@ footer .footer-body .footer-contacts .footer-email {
   border: 1px solid #777777;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.popup-calc-profile .popup-calc-profile-content label .error {
+  border: 1px solid red;
 }
 
 .popup-calc-profile .popup-calc-profile-content .popup-calc-profile-close {

@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupEngineer = document.querySelector('#popup-engineer');
     const popupCall = document.querySelector('#popup-call');
     const popupCalc = document.querySelector('#popup-calc');
+    const popupCalcEnd = document.querySelector('.popup-calc-end');
+    const popupCalcProfileCloseBtn = document.querySelector('.popup-calc-profile-close');
+    const calcProfileModal = document.querySelector('#calc-profile-modal');
     const bigImgModal = document.querySelector('.big-img-modal');
     const bigImgModalIcon = document.querySelector('.big-img-modal-icon');
     const ourWorksItems = document.querySelectorAll('.our-works-item');
@@ -28,8 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const glazingTabsContent = document.querySelectorAll('.glazing-items');
     const decorationTabsContent = document.querySelectorAll('.decoration-item');
     const modalCalcTabsContent = document.querySelectorAll('.big-img-icon');
-
-    // firebase.database().ref().child('contacts').push(variable);
+    const endCalcModalCloseBtn = document.querySelector('.calc-end-close-btn');
+    const customCheckboxList = document.querySelectorAll('.checkbox-custom');
+    const widthInput = document.querySelector('#width');
+    const heightInput = document.querySelector('#height');
+    const deadline = '2020-08-01';
 
 /*Initialize Firebase*/
     const firebaseConfig = {
@@ -48,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /*Function for showing and hiding modal windows*/
     function showModals(trigger, modal, closeBtn) {
         function showModal() {
+            modalCalcTabsIcons[0].classList.add('active');
             overlay.classList.add('overlay-visible');
             modal.classList.add('modal-visible');
             document.body.style.overflow = 'hidden';
@@ -68,6 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlay.classList.remove('overlay-visible');
                 modal.classList.remove('modal-visible');
                 document.body.style.overflow = '';
+                modalCalcTabsIcons.forEach( (item) => {
+                    item.classList.remove('active');
+                });
+                widthInput.value = '';
+                heightInput.value = '';
             });
 
             clearTimeout(timerId);
@@ -164,8 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showBigImgModal();
 
 /*Function for countdown timer*/
-    const deadline = '2020-08-01';
-
     function countDown(deadline) {
         function getTimeRemaining(endTime) {
             const time = Date.parse(endTime) - Date.parse( new Date() );
@@ -272,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         currentForm.addEventListener('submit', (event) => {
             event.preventDefault();
+
             data.name = nameInput.value;
             data.phone = phoneInput.value;
 
@@ -290,4 +301,139 @@ document.addEventListener('DOMContentLoaded', function() {
     sendReguestData('.special-offer-call-engineer-form', 'engineerReguests');
     sendReguestData('.modal-call-engineer-form', 'engineerReguests');
     sendReguestData('.modal-call-form', 'callReguests');
+
+/*Function for sending data from calc modals to firebase*/
+    function sendModalCalcData() {
+        const data = {};
+        const calcEndForm = document.querySelector('.calc-end-form');
+        const formNotice = calcEndForm.querySelector('.form-notice');
+        const nameInput = document.querySelector('.calc-end-name-input');
+        const phoneInput = document.querySelector('.calc-end-phone-input');
+        const nextCalcBtn = document.querySelector('.popup-calc-next-button');
+        const nextProfileBtn = document.querySelector('.popup-calc-profile-next-button');
+        const coldCheckbox = document.querySelectorAll('.checkbox')[0];
+        const warmCheckbox = document.querySelectorAll('.checkbox')[1];
+
+        popupCalcProfileCloseBtn.addEventListener('click', function() {
+            calcProfileModal.classList.remove('modal-visible');
+            overlay.classList.remove('overlay-visible');
+            document.body.style.overflow = '';
+            coldCheckbox.checked = false;
+            warmCheckbox.checked = false;
+        });
+
+        endCalcModalCloseBtn.addEventListener('click', function() {
+            popupCalcEnd.classList.remove('modal-visible');
+            overlay.classList.remove('overlay-visible');
+            document.body.style.overflow = '';
+        });
+
+        widthInput.addEventListener('input', (event) => {
+            event.target.value = event.target.value.replace(/[^0-9]/, '');
+        });
+
+        heightInput.addEventListener('input', (event) => {
+            event.target.value = event.target.value.replace(/[^0-9]/, '');
+        });
+
+        phoneInput.addEventListener('input', (event) => {
+            event.target.value = event.target.value.replace(/[^0-9+-]/, '');
+        });
+
+        nextCalcBtn.addEventListener('click', () => {
+            if (widthInput.value === '' || heightInput.value === '') {
+                widthInput.classList.add('error');
+                heightInput.classList.add('error');
+
+                return;
+            }
+
+            const form = document.querySelector('.balcon-icons-img .active').getAttribute('form');
+
+            popupCalc.classList.remove('modal-visible');
+            calcProfileModal.classList.add('modal-visible');
+
+            data.form = form;
+            data.width = widthInput.value;
+            data.height = heightInput.value;
+
+            modalCalcTabsIcons.forEach( (item) => {
+                item.classList.remove('active');
+            });
+
+            widthInput.value = '';
+            heightInput.value = '';
+            
+            widthInput.classList.remove('error');
+            heightInput.classList.remove('error');
+        });
+
+        coldCheckbox.addEventListener('change', () => {
+            if (coldCheckbox.checked === true) {
+                data.profile = coldCheckbox.id;
+
+                warmCheckbox.checked = false;
+            }
+
+            customCheckboxList.forEach( (item) => {
+                item.classList.remove('error');
+            });
+        });
+
+        warmCheckbox.addEventListener('change', () => {
+            if (warmCheckbox.checked === true) {
+                data.profile = warmCheckbox.id;
+
+                coldCheckbox.checked = false;
+            }
+
+            customCheckboxList.forEach( (item) => {
+                item.classList.remove('error');
+            });
+        });
+
+        nextProfileBtn.addEventListener('click', () => {
+            if (warmCheckbox.checked === false && coldCheckbox.checked === false) {
+                customCheckboxList.forEach( (item) => {
+                    item.classList.add('error');
+                });
+
+                return;
+            }
+
+            const selectedIndex = document.querySelector('#view-type').selectedIndex;
+            const selectedOptions = document.querySelectorAll('#view-type > option');
+           
+            calcProfileModal.classList.remove('modal-visible');
+            popupCalcEnd.classList.add('modal-visible');
+
+            data.type = selectedOptions[selectedIndex].value;
+
+            coldCheckbox.checked = false;
+            warmCheckbox.checked = false;
+        });
+        
+        calcEndForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            data.name = nameInput.value;
+            data.phone = phoneInput.value;
+
+            firebase.database().ref().child('calculateRequests').push(data);
+
+            formNotice.style.fontSize = '16px';
+
+            setTimeout(closeCalcModal, 1000);
+        });
+
+        function closeCalcModal() {
+            popupCalcEnd.classList.remove('modal-visible');
+            overlay.classList.remove('overlay-visible');
+            document.body.style.overflow = '';
+            nameInput.value = '';
+            phoneInput.value = '';
+        }
+    }
+
+    sendModalCalcData();
 });

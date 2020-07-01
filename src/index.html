@@ -1077,16 +1077,16 @@
                 <h3 class="popup-calc-subtitle">Виберіть форму балкона <br>і вкажіть розміри</h3>
                 <div class="balcon-icons">
                     <span class="balcon-icons-img">
-                        <img  class="active" src="./images/modal-calc/balkon/ba-1.png" alt="Тип1">
+                        <img form="Type-1" class="active" src="./images/modal-calc/balkon/ba-1.png" alt="Тип1">
                     </span>
                     <span class="balcon-icons-img">
-                        <img src="./images/modal-calc/balkon/ba-2.png" alt="Тип2">
+                        <img form="Type-2" src="./images/modal-calc/balkon/ba-2.png" alt="Тип2">
                     </span>
                     <span class="balcon-icons-img">
-                        <img src="./images/modal-calc/balkon/ba-3.png" alt="Тип3">
+                        <img form="Type-3" src="./images/modal-calc/balkon/ba-3.png" alt="Тип3">
                     </span>
                     <span class="balcon-icons-img"> 
-                        <img src="./images/modal-calc/balkon/ba-4.png" alt="Тип4">
+                        <img form="Type-4" src="./images/modal-calc/balkon/ba-4.png" alt="Тип4">
                     </span>
                 </div>
                 <div class="big-img">
@@ -1106,7 +1106,7 @@
             </div>
         </div>
     </div> 
-    <div class="popup-calc-profile">
+    <div class="popup-calc-profile" id="calc-profile-modal">
         <div class="popup-dialog">
             <div class="popup-calc-profile-content">
                 <button type="button" class="popup-calc-profile-close"><strong>&times;</strong></button>
@@ -1121,13 +1121,13 @@
                 </select>
                 <img class="select-img" src="./images/modal-calc/cold-icon.png" alt="Холодне">
                 <label>
-                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                    <input class="checkbox" id="cold-profile" type="checkbox" name="checkbox-test">
                     <span class="checkbox-custom" id="cold"></span>
                     <span class="label">Холодне</span>
                 </label>
                 <img class="select-img" src="./images/modal-calc/warm-icon.png" alt="Тепле">
                 <label>
-                    <input class="checkbox" type="checkbox" name="checkbox-test">
+                    <input class="checkbox" id="warm-profile" type="checkbox" name="checkbox-test">
                     <span class="checkbox-custom" id="warm"></span>
                     <span class="label">Тепле</span>
                 </label>
@@ -1139,17 +1139,17 @@
         <div class="popup-dialog">
             <div class="popup-content text-center">
                 <div class="popup-form">
-                    <form class="form" action="#">
-                        <button type="button" class="popup-close"><strong>&times;</strong></button>
+                    <form class="form calc-end-form" action="#">
+                        <button type="button" class="popup-close calc-end-close-btn"><strong>&times;</strong></button>
                         <h2 class="form-title">Дякуюємо за звернення! 
                             <br>
                             <span class="form-subtitle">
                                 Залиште свої дані
                             </span>
                         </h2>
-                        <input class="name-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
-                        <input class="phone-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
-                        <button class="send-btn" name="submit" type="submit">Розрахувати вартість</button>
+                        <input class="name-input calc-end-name-input" name="user-name" required type="text" placeholder="Введіть ваше ім'я">
+                        <input class="phone-input calc-end-phone-input" name="user-phone" required type="text" placeholder="Введіть номер телефону">
+                        <button class="send-btn end-calc-send-btn" name="submit" type="submit">Розрахувати вартість</button>
                         <p class="form-notice">Передзвонимо протягом 10 хвилин</p>
                     </form>
                 </div>

@@ -1293,6 +1293,10 @@ footer {
                 font-size: 14px;
             }
 
+            .error {
+                border: 1px solid red;
+            }
+
             .form-control-notice {
                 font-family: 'Open Sans Regular';
                 color: #333333;
@@ -1399,6 +1403,10 @@ footer {
                 border-radius: 3px;
                 cursor: pointer;
             }
+
+            .error {
+                border: 1px solid red;
+            }
         }
 
         .popup-calc-profile-close {
@@ -1474,6 +1482,7 @@ footer {
             display: flex; 
         }
     }
+
 /*Decoration*/
     .decoration {
         padding: 30px 0;
@@ -1512,6 +1521,7 @@ footer {
             }
         }
     }
+
 /*Our-works*/
     .our-works {
         padding: 0 0 30px;
@@ -1540,6 +1550,7 @@ footer {
             }
         }
     }
+
 /*Our contacts*/
     .our-contacts {
         padding: 40px 0;
@@ -1598,6 +1609,7 @@ footer {
             }
         }
     }
+
 /*Intro*/
     .intro {
 
@@ -1612,6 +1624,7 @@ footer {
             }
         }
     }
+
 /*Glazing*/
     .glazing {
 
@@ -1644,6 +1657,7 @@ footer {
             }
         }   
     }
+
 /*Decoration*/
     .decoration {
         padding: 30px 0;
@@ -1699,6 +1713,7 @@ footer {
             }
         }
     }
+
 /*Payment options*/
     .payment-options {
         padding: 20px 0 40px;
@@ -1719,6 +1734,7 @@ footer {
             }
         }
     }
+
 /*Special offer*/
     .special-offer {
         padding: 30px 0;
@@ -1740,6 +1756,7 @@ footer {
             }
         }
     }
+
 /*Questions*/
     .questions {
         padding: 40px 0;
@@ -1805,6 +1822,7 @@ footer {
             }
         }
     }
+
 /*Intro*/
     .intro {
 
@@ -1841,6 +1859,7 @@ footer {
             }
         }
     }
+
 /*Glazing*/
     .glazing {
 
@@ -1890,6 +1909,7 @@ footer {
             }
         }
     }
+
 /*Decoration*/
     .decoration {
 
@@ -1934,6 +1954,7 @@ footer {
             }
         }
     }
+
 /*Guarantees*/
     .guarantees {
         padding: 30px 0;
@@ -1968,6 +1989,7 @@ footer {
             }
         }
     }
+
 /*Payment options*/
     .payment-options {
         padding: 10px 0 40px;
@@ -1997,6 +2019,7 @@ footer {
             }
         }
     }
+
 /*Special offer*/
 .special-offer {
     padding: 0;
@@ -2021,10 +2044,12 @@ footer {
         }
     }
 }
+
 /*Questions*/
     .questions {
         padding: 0;
     }
+
 /*Footer*/
     footer {
         padding: 10px 0;
@@ -2043,6 +2068,7 @@ footer {
             }
         }
     }
+
 /*Modals*/
     .popup, .popup-engineer, .popup-calc-end {
         
