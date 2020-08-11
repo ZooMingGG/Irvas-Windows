@@ -1,6 +1,5 @@
 # .map files exception
 *.map
-*.json
 
 # .jshint exception
 *.jshintrc
