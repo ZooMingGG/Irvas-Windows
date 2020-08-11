@@ -82,7 +82,7 @@ gulp.task("fonts", () => {
 });
 
 gulp.task("copy-auxiliary-js", () => {
-  return gulp.src(['./src/js/*', '!./src/js/index.js'])
+  return gulp.src(['./src/js/*.js', '!./src/js/index.js'])
   .pipe(gulp.dest(dist + 'js/'))
   .on("end", browsersync.reload);
 });

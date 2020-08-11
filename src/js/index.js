@@ -1,6 +1,10 @@
 'use strict';
+import firebaseConfig from './modules/firebase-config';
+import imagesPopup from './modules/images-popup';
+import countDown from './modules/count-down';
+import scrollTop from './modules/scroll';
+
 document.addEventListener('DOMContentLoaded', function() {
-    const scrollBtn = document.querySelector('.scroll-btn');
     const overlay = document.querySelector('.overlay');
     const headerPopupEngineerBtn = document.querySelector('.header-popup-btn');
     const callLink = document.querySelector('.call-link');
@@ -12,16 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupCalcEnd = document.querySelector('.popup-calc-end');
     const popupCalcProfileCloseBtn = document.querySelector('.popup-calc-profile-close');
     const calcProfileModal = document.querySelector('#calc-profile-modal');
-    const bigImgModal = document.querySelector('.big-img-modal');
-    const bigImgModalIcon = document.querySelector('.big-img-modal-icon');
-    const ourWorksItems = document.querySelectorAll('.our-works-item');
     const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
     const closeCallModalBtn = document.querySelector('.popup-call-close');
     const closeCalcModalBtn = document.querySelector('.popup-calc-close');
-    const days = document.querySelector('.days');
-    const hours = document.querySelector('.hours');
-    const minutes = document.querySelector('.minutes');
-    const seconds = document.querySelector('.seconds');
     const glazingTabs = document.querySelectorAll('.glazing-tab');
     const glazingSliderTabs = document.querySelectorAll('.slider-tab');
     const modalCalcTabs = document.querySelectorAll('.balcon-icons-img');
@@ -35,19 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const customCheckboxList = document.querySelectorAll('.checkbox-custom');
     const widthInput = document.querySelector('#width');
     const heightInput = document.querySelector('#height');
-    const deadline = '2020-08-01';
-
-/*Initialize Firebase*/
-    const firebaseConfig = {
-        apiKey: "AIzaSyD1as3gwrYmKuFoBxQ1nvWIkRPnq8mV3iE",
-        authDomain: "irvas-windows.firebaseapp.com",
-        databaseURL: "https://irvas-windows.firebaseio.com",
-        projectId: "irvas-windows",
-        storageBucket: "irvas-windows.appspot.com",
-        messagingSenderId: "794720514305",
-        appId: "1:794720514305:web:f49e4543faf67b5961ab00",
-        measurementId: "G-Y64KPCRM58"
-    };
+    const deadline = '2020-08-29';
 
     firebase.initializeApp(firebaseConfig);
 
@@ -122,112 +107,11 @@ document.addEventListener('DOMContentLoaded', function() {
     showModals(questionsLink, popupCall, closeCallModalBtn);
     showModals(showCalcModalButton, popupCalc, closeCalcModalBtn);
 
-/*Function for show and hide scroll button*/
-    function showScrollBtn() {
-        let currentCords = 0;
 
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > document.documentElement.clientHeight) {
-                if (document.documentElement.scrollTop < currentCords) {
-                    scrollBtn.classList.add('visible');
-                } else {
-                    scrollBtn.classList.remove('visible');
-                }
+    scrollTop();
 
-                currentCords = document.documentElement.scrollTop;
-            } else {
-                currentCords = 0;
-                scrollBtn.classList.remove('visible');
-            }
-        });
-
-        scrollBtn.addEventListener('click', function() {
-            document.documentElement.scrollTo(0, 0);
-            currentCords = 0;
-        });
-    }
-
-    showScrollBtn();
-
-/*Function for show modal window with big img of work*/
-    function showBigImgModal() {
-        ourWorksItems.forEach( function(item) {
-            item.addEventListener('click', (event) => {
-                let currentItem =  event.target.closest('.our-works-item');
-
-                bigImgModalIcon.src = currentItem.dataset.bigImgSrc;
-                overlay.classList.add('overlay-visible');
-                document.body.style.overflow = 'hidden';
-                bigImgModal.classList.add('modal-visible');
-            });
-        });
-
-        bigImgModal.addEventListener('click', (event) => {
-            let bigModalImg = event.target.closest('.big-img-modal-icon');
-
-            if (!bigModalImg) {
-                overlay.classList.remove('overlay-visible');
-                document.body.style.overflow = '';
-                bigImgModal.classList.remove('modal-visible');
-            }
-        });
-    }
-
-    showBigImgModal();
-
-/*Function for countdown timer*/
-    function countDown(deadline) {
-        function getTimeRemaining(endTime) {
-            const time = Date.parse(endTime) - Date.parse( new Date() );
-            let seconds = Math.floor((time / 1000) % 60);
-            let minutes = Math.floor((time / 1000 / 60) % 60);
-            let hours = Math.floor((time / 1000 / 60 / 60) % 24);
-            let days = Math.floor((time / 1000 / 60 / 60 / 24));
-
-            return {
-                'total': time,
-                'days': days,
-                'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds
-            };
-        }
-
-        function setClock(endTime) {
-            updateClock(endTime);
-
-            const timerId = setInterval(updateClock, 1000);
-
-            function updateClock() {
-                const time = getTimeRemaining(endTime);
-
-                days.textContent = addZero(time.days);
-                hours.textContent = addZero(time.hours);
-                minutes.textContent = addZero(time.minutes);
-                seconds.textContent = addZero(time.seconds);
-
-                if (time.total <= 0) {
-                    days.textContent = '00';
-                    hours.textContent = '00';
-                    minutes.textContent = '00';
-                    seconds.textContent = '00';
-
-                    clearInterval(timerId);
-                }
-            }
-        }
-
-        function addZero(num) {
-            if (num <= 9) {
-                return '0' + num;
-            } else {
-                return num;
-            }
-        }
-
-        setClock(deadline);
-    }
-
+    imagesPopup();
+    
     countDown(deadline);
 
 /*Function for tabs*/
