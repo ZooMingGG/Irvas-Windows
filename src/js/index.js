@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', (event) => {
                 let currentItem =  event.target.closest('.our-works-item');
 
-                bigImgModalIcon.src = currentItem.getAttribute('big-img-src');
+                bigImgModalIcon.src = currentItem.dataset.bigImgSrc;
                 overlay.classList.add('overlay-visible');
                 document.body.style.overflow = 'hidden';
                 bigImgModal.classList.add('modal-visible');
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            const form = document.querySelector('.balcon-icons-img .active').getAttribute('form');
+            const form = document.querySelector('.balcon-icons-img .active').dataset.form;
 
             popupCalc.classList.remove('modal-visible');
             calcProfileModal.classList.add('modal-visible');

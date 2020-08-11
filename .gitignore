@@ -1,9 +1,13 @@
 # .map files exception
 *.map
 *.json
+
 # .jshint exception
 *.jshintrc
  
-# gulp exception
-gulpfile.js
+#node_modules exception
+package-lock.json
 node_modules
+
+#dist exception
+dist
