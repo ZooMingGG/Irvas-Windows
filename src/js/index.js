@@ -5,23 +5,14 @@ import countDown from './modules/count-down';
 import scrollTop from './modules/scroll';
 import tabs from './modules/tabs';
 import modals from './modules/modals';
+import sendRequestData from './modules/send-request-data';
 
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.overlay');
-    const headerPopupEngineerBtn = document.querySelector('.header-popup-btn');
-    const callLink = document.querySelector('.call-link');
-    const questionsLink = document.querySelector('.questions-link');
-    const showCalcModalButton = document.querySelectorAll('.calc-price-button');
-    const popupEngineer = document.querySelector('#popup-engineer');
-    const popupCall = document.querySelector('#popup-call');
     const popupCalc = document.querySelector('#popup-calc');
     const popupCalcEnd = document.querySelector('.popup-calc-end');
     const popupCalcProfileCloseBtn = document.querySelector('.popup-calc-profile-close');
     const calcProfileModal = document.querySelector('#calc-profile-modal');
-    const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
-    const closeCallModalBtn = document.querySelector('.popup-call-close');
-    const closeCalcModalBtn = document.querySelector('.popup-calc-close');
-    const modalCalcTabsIcons = document.querySelectorAll('.balcon-icons-img > img');
     const endCalcModalCloseBtn = document.querySelector('.calc-end-close-btn');
     const customCheckboxList = document.querySelectorAll('.checkbox-custom');
     const widthInput = document.querySelector('#width');
@@ -29,49 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const deadline = '2020-08-29';
 
     firebase.initializeApp(firebaseConfig);
-
-/*Function for showing and hiding modal windows*/
-    // function showModals(trigger, modal, closeBtn) {
-    //     function showModal() {
-    //         modalCalcTabsIcons[0].classList.add('active');
-    //         overlay.classList.add('overlay-visible');
-    //         modal.classList.add('modal-visible');
-    //         document.body.style.overflow = 'hidden';
-
-    //         modal.addEventListener('click', function(event) {
-    //             if (modal !== popupCalc) {
-    //                 let form = event.target.closest('form');
-
-    //                 if (!form) {
-    //                     overlay.classList.remove('overlay-visible');
-    //                     modal.classList.remove('modal-visible');
-    //                     document.body.style.overflow = '';
-    //                 }
-    //             }
-    //         });
-            
-    //         closeBtn.addEventListener('click', function() {
-    //             overlay.classList.remove('overlay-visible');
-    //             modal.classList.remove('modal-visible');
-    //             document.body.style.overflow = '';
-    //             modalCalcTabsIcons.forEach( (item) => {
-    //                 item.classList.remove('active');
-    //             });
-    //             widthInput.value = '';
-    //             heightInput.value = '';
-    //         });
-
-    //         clearTimeout(timerId);
-    //     } 
-
-    //     if (trigger === showCalcModalButton) {
-    //         trigger.forEach( function(item) {
-    //             item.addEventListener('click', showModal);
-    //         });
-    //     } else {
-    //         trigger.addEventListener('click', showModal);
-    //     }
-    // }
 
     modals('.header-popup-btn', '#popup-engineer', '.popup-engineer-close');
     modals('.call-link', '#popup-call', '.popup-call-close');
@@ -91,39 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs('.decoration-slider-tab', '.decoration-item');
     tabs('.balcon-icons-img > img', '.big-img-icon');
 
-/*Function for send data to database*/
-    function sendReguestData(form, request) {
-        const data = {};
-        const currentForm = document.querySelector(form);
-        const formNotice = currentForm.querySelector('.form-notice');
-        const nameInput = currentForm.querySelector('.name-input');
-        const phoneInput = currentForm.querySelector('.phone-input');
-
-        phoneInput.addEventListener('input', (event) => {
-            event.target.value = event.target.value.replace(/[^0-9+-]/, '');
-        });
-
-        currentForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            data.name = nameInput.value;
-            data.phone = phoneInput.value;
-
-            firebase.database().ref().child(request).push(data);
-
-            nameInput.value = '';
-            phoneInput.value = '';
-
-            formNotice.textContent = 'Ми передзвонимо вам через 10 хвилин!';
-            formNotice.style.fontSize = '16px';
-        });
-    }
-
-    sendReguestData('.call-engineer-form', 'engineerReguests');
-    sendReguestData('.decoration-call-engineer-form', 'engineerReguests');
-    sendReguestData('.special-offer-call-engineer-form', 'engineerReguests');
-    sendReguestData('.modal-call-engineer-form', 'engineerReguests');
-    sendReguestData('.modal-call-form', 'callReguests');
+    sendRequestData('.call-engineer-form', 'engineerReguests');
+    sendRequestData('.decoration-call-engineer-form', 'engineerReguests');
+    sendRequestData('.special-offer-call-engineer-form', 'engineerReguests');
+    sendRequestData('.modal-call-engineer-form', 'engineerReguests');
+    sendRequestData('.modal-call-form', 'callReguests');
 
 /*Function for sending data from calc modals to firebase*/
     function sendModalCalcData() {
