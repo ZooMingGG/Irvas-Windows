@@ -3,6 +3,7 @@ import firebaseConfig from './modules/firebase-config';
 import imagesPopup from './modules/images-popup';
 import countDown from './modules/count-down';
 import scrollTop from './modules/scroll';
+import tabs from './modules/tabs';
 
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.overlay');
@@ -19,15 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeEngineerModalBtn = document.querySelector('.popup-engineer-close');
     const closeCallModalBtn = document.querySelector('.popup-call-close');
     const closeCalcModalBtn = document.querySelector('.popup-calc-close');
-    const glazingTabs = document.querySelectorAll('.glazing-tab');
-    const glazingSliderTabs = document.querySelectorAll('.slider-tab');
-    const modalCalcTabs = document.querySelectorAll('.balcon-icons-img');
-    const decorationTabs = document.querySelectorAll('.decoration-tab');
-    const decorationSliderTabs = document.querySelectorAll('.decoration-slider-tab');
     const modalCalcTabsIcons = document.querySelectorAll('.balcon-icons-img > img');
-    const glazingTabsContent = document.querySelectorAll('.glazing-items');
-    const decorationTabsContent = document.querySelectorAll('.decoration-item');
-    const modalCalcTabsContent = document.querySelectorAll('.big-img-icon');
     const endCalcModalCloseBtn = document.querySelector('.calc-end-close-btn');
     const customCheckboxList = document.querySelectorAll('.checkbox-custom');
     const widthInput = document.querySelector('#width');
@@ -114,43 +107,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     countDown(deadline);
 
-/*Function for tabs*/
-    function tabs(tabs, content) {
-        tabs.forEach( (item, index) => {
-            item.addEventListener('click', (event) => {
-                let glazingTarget = event.target.closest('.tab-item');
-                let modalCalcTarget = event.target.closest('.balcon-icons-img');
-                let decorationTarget = event.target.closest('.tab');
-
-                tabs.forEach( (item) => {
-                    item.classList.remove('active');
-                });
-
-                content.forEach( (item) => {
-                    item.classList.remove('visible');
-                });
-
-                modalCalcTabsIcons.forEach( (item) => {
-                    item.classList.remove('active');
-                });
-
-                if (glazingTarget === item || modalCalcTarget === item || decorationTarget === item) {
-                    if (tabs === modalCalcTabs) {
-                        modalCalcTabsIcons[index].classList.add('active');
-                    }
-                    
-                    item.classList.add('active');
-                    content[index].classList.add('visible');
-                }
-            }); 
-        }); 
-    }
-
-    tabs(glazingTabs, glazingTabsContent);
-    tabs(glazingSliderTabs, glazingTabsContent);
-    tabs(modalCalcTabs, modalCalcTabsContent);
-    tabs(decorationTabs, decorationTabsContent);
-    tabs(decorationSliderTabs, decorationTabsContent);
+    tabs('.glazing-tab', '.glazing-items');
+    tabs('.slider-tab', '.glazing-items');
+    tabs('.decoration-tab', '.decoration-item');
+    tabs('.decoration-slider-tab', '.decoration-item');
+    tabs('.balcon-icons-img > img', '.big-img-icon');
 
 /*Function for send data to database*/
     function sendReguestData(form, request) {
