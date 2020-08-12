@@ -1,8 +1,9 @@
-const modals = (triggerClass, modalClass, closeBtnClass, delay = false) => {
+const modals = (triggerClass, modalClass, closeBtnClass, delay = false, required = false) => {
     const overlay = document.querySelector('.overlay');
     const trigger = document.querySelectorAll(triggerClass);
     const modal = document.querySelector(modalClass);
     const closeBtn = document.querySelector(closeBtnClass);
+    const calcModals = document.querySelectorAll('.calc-form');
 
     const calcScroll = () => {
         let div = document.createElement('div');
@@ -42,6 +43,40 @@ const modals = (triggerClass, modalClass, closeBtnClass, delay = false) => {
     };
 
     const showModal = () => {
+        if (required) {
+            const widthInput = document.querySelector('#width');
+            const heightInput = document.querySelector('#height');
+            
+            
+            if (widthInput.value === '' || heightInput.value === '') {
+                widthInput.classList.add('error');
+                heightInput.classList.add('error');
+
+                return;
+            } else {
+                widthInput.classList.remove('error');
+                heightInput.classList.remove('error');
+            }
+
+            if (modalClass === '.popup-calc-end') {
+                const coldCheckbox = document.querySelectorAll('.checkbox')[0];
+                const warmCheckbox = document.querySelectorAll('.checkbox')[1];
+                const customCheckboxList = document.querySelectorAll('.checkbox-custom');
+
+                if (warmCheckbox.checked === false && coldCheckbox.checked === false) {
+                    customCheckboxList.forEach((item) => {
+                        item.classList.add('error');
+                    });
+        
+                    return;
+                }
+            }
+        } 
+
+        calcModals.forEach((item) => {
+            item.classList.remove('modal-visible');
+        });
+
         document.body.style.marginRight = `${scrollWidth}px`;
         overlay.classList.add('overlay-visible');
         modal.classList.add('modal-visible');
