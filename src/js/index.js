@@ -4,6 +4,7 @@ import imagesPopup from './modules/images-popup';
 import countDown from './modules/count-down';
 import scrollTop from './modules/scroll';
 import tabs from './modules/tabs';
+import modals from './modules/modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.overlay');
@@ -30,76 +31,53 @@ document.addEventListener('DOMContentLoaded', function() {
     firebase.initializeApp(firebaseConfig);
 
 /*Function for showing and hiding modal windows*/
-    function showModals(trigger, modal, closeBtn) {
-        function showModal() {
-            modalCalcTabsIcons[0].classList.add('active');
-            overlay.classList.add('overlay-visible');
-            modal.classList.add('modal-visible');
-            document.body.style.overflow = 'hidden';
+    // function showModals(trigger, modal, closeBtn) {
+    //     function showModal() {
+    //         modalCalcTabsIcons[0].classList.add('active');
+    //         overlay.classList.add('overlay-visible');
+    //         modal.classList.add('modal-visible');
+    //         document.body.style.overflow = 'hidden';
 
-            modal.addEventListener('click', function(event) {
-                if (modal !== popupCalc) {
-                    let form = event.target.closest('form');
+    //         modal.addEventListener('click', function(event) {
+    //             if (modal !== popupCalc) {
+    //                 let form = event.target.closest('form');
 
-                    if (!form) {
-                        overlay.classList.remove('overlay-visible');
-                        modal.classList.remove('modal-visible');
-                        document.body.style.overflow = '';
-                    }
-                }
-            });
+    //                 if (!form) {
+    //                     overlay.classList.remove('overlay-visible');
+    //                     modal.classList.remove('modal-visible');
+    //                     document.body.style.overflow = '';
+    //                 }
+    //             }
+    //         });
             
-            closeBtn.addEventListener('click', function() {
-                overlay.classList.remove('overlay-visible');
-                modal.classList.remove('modal-visible');
-                document.body.style.overflow = '';
-                modalCalcTabsIcons.forEach( (item) => {
-                    item.classList.remove('active');
-                });
-                widthInput.value = '';
-                heightInput.value = '';
-            });
+    //         closeBtn.addEventListener('click', function() {
+    //             overlay.classList.remove('overlay-visible');
+    //             modal.classList.remove('modal-visible');
+    //             document.body.style.overflow = '';
+    //             modalCalcTabsIcons.forEach( (item) => {
+    //                 item.classList.remove('active');
+    //             });
+    //             widthInput.value = '';
+    //             heightInput.value = '';
+    //         });
 
-            clearTimeout(timerId);
-        } 
+    //         clearTimeout(timerId);
+    //     } 
 
-        if (trigger === showCalcModalButton) {
-            trigger.forEach( function(item) {
-                item.addEventListener('click', showModal);
-            });
-        } else {
-            trigger.addEventListener('click', showModal);
-        }
-    }
+    //     if (trigger === showCalcModalButton) {
+    //         trigger.forEach( function(item) {
+    //             item.addEventListener('click', showModal);
+    //         });
+    //     } else {
+    //         trigger.addEventListener('click', showModal);
+    //     }
+    // }
 
-/*Function for showing popup call when user spend 60 seconds in site*/
-    let timerId = setTimeout( () => {
-        popupCall.classList.add('modal-visible');
-        overlay.classList.add('overlay-visible');
-        document.body.style.overflow = 'hidden';
-
-        popupCall.addEventListener('click', function(event) {
-            let form = event.target.closest('form');
-
-            if (!form) {
-                overlay.classList.remove('overlay-visible');
-                popupCall.classList.remove('modal-visible');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        closeCallModalBtn.addEventListener('click', function() {
-            overlay.classList.remove('overlay-visible');
-            popupCall.classList.remove('modal-visible');
-            document.body.style.overflow = '';
-        });
-    }, 60000);
-
-    showModals(headerPopupEngineerBtn, popupEngineer, closeEngineerModalBtn);
-    showModals(callLink, popupCall, closeCallModalBtn);
-    showModals(questionsLink, popupCall, closeCallModalBtn);
-    showModals(showCalcModalButton, popupCalc, closeCalcModalBtn);
-
+    modals('.header-popup-btn', '#popup-engineer', '.popup-engineer-close');
+    modals('.call-link', '#popup-call', '.popup-call-close');
+    modals('.call-link', '#popup-call', '.popup-call-close', true);
+    modals('.questions-link', '#popup-call', '.popup-call-close');
+    modals('.calc-price-button', '#popup-calc', '.popup-calc-close');
 
     scrollTop();
 
@@ -201,10 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
             data.form = form;
             data.width = widthInput.value;
             data.height = heightInput.value;
-
-            modalCalcTabsIcons.forEach( (item) => {
-                item.classList.remove('active');
-            });
 
             widthInput.value = '';
             heightInput.value = '';
